@@ -58,6 +58,9 @@ namespace UI_for_Project
         {
             btnStatistic.Style = SelectingStyle();
 
+            Holder.Content = null;
+            while (Holder.NavigationService.RemoveBackEntry() != null) ;
+
             btnCandidate.Style = IdlingStyle();
             btnScoring.Style = IdlingStyle();
         }

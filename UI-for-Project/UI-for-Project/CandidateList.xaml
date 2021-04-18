@@ -21,13 +21,6 @@
                     Margin="73,25,427,55">
                 ADD
             </Button>
-            <Button x:Name="RemoveBtn" Width="80" Height="30"
-                    Background="#FFBC42"
-                    Foreground="#127475"
-                    BorderThickness="0"
-                    Margin="186,25,314,55">
-                REMOVE
-            </Button>
             <TextBox x:Name="txtBoxSearch"
                      Width="290"
                      Height="20" Margin="73,60,217,30">

@@ -18,8 +18,8 @@ namespace UI_for_Project
     /// </summary>
     public partial class SubjectButton : UserControl
     {
-        public string SubjectName = "defaultSubject";
-        public int numCount = 0;
+        public string SubjectName { get; set; }
+        public int numCount { get; set; }
         public SubjectButton()
         {
             InitializeComponent();
@@ -29,6 +29,7 @@ namespace UI_for_Project
         public SubjectButton(string name, int Count)
         {
             InitializeComponent();
+            
             SubjectName = name;
             numCount = Count;
             txtSubjectName.Text = SubjectName;

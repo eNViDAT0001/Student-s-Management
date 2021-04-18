@@ -8,13 +8,13 @@
              d:DesignHeight="90" d:DesignWidth="120">
     
         <Button x:Name="btnS1"
-                Width="120"
-                Height="90"
+                Width="90"
+                Height="60"
                 Background="#127475"
                 >
             <StackPanel Orientation="Vertical">
-                <TextBlock x:Name="txtSubjectName" Foreground="#F5DFBB" FontFamily="Roboto" FontSize="18"> SUBJECT 1</TextBlock>
-                <TextBlock x:Name="txtCount" Foreground="#FFFFFF" FontFamily="Roboto" FontSize="12"> Count : 20</TextBlock>
+                <TextBlock x:Name="txtSubjectName" Foreground="#F5DFBB" FontFamily="Roboto" FontSize="12"> SUBJECT 1</TextBlock>
+                <TextBlock x:Name="txtCount" Foreground="#FFFFFF" FontFamily="Roboto" FontSize="9"> Count : 20</TextBlock>
             </StackPanel>
 
         </Button>
