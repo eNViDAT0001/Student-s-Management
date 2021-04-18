@@ -85,7 +85,7 @@ namespace UI_for_Project {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/UI-for-Project;component/candidatelist.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Main_Program;component/candidatelist.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\CandidateList.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

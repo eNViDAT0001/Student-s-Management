@@ -77,7 +77,7 @@ namespace UI_for_Project {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/UI-for-Project;component/subjectbutton.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Main_Program;component/subjectbutton.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\SubjectButton.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
