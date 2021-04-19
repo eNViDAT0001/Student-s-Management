@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Git\\Student-s-Management\\UI-for-Project\\UI-for-Project\\Main_Program.csproj",
+      "projectUniqueName": "D:\\Git\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\Main_Program.csproj",
       "projectName": "Main_Program",
-      "projectPath": "D:\\Git\\Student-s-Management\\UI-for-Project\\UI-for-Project\\Main_Program.csproj",
+      "projectPath": "D:\\Git\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\Main_Program.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "D:\\Git\\Student-s-Management\\UI-for-Project\\UI-for-Project\\obj\\",
+      "outputPath": "D:\\Git\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

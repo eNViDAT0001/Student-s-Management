@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Git\Student-s-Management\UI-for-Project\UI-for-Project\obj\Debug\netcoreapp3.1\
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\
 UI_for_Project
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-D:\Git\Student-s-Management\UI-for-Project\UI-for-Project\App.xaml
-4-499779923
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\App.xaml
+62018305248
 
-8-230624520
+11-1459117167
 192-1533232326
-CandidateList.xaml;MainWindow.xaml;Scoring.xaml;SubjectButton.xaml;
+CandidateList.xaml;ExamRegister.xaml;Login.xaml;MainWindow.xaml;Scoring.xaml;SubjectButton.xaml;
 
-False
+True
 

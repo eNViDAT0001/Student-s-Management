@@ -18,9 +18,7 @@
                     Background="#FFBC42"
                     Foreground="#127475" 
                     BorderThickness="0"
-                    Margin="73,25,427,55">
-                ADD
-            </Button>
+                    Margin="73,25,427,55" Content="Arrange Room"/>
             <TextBox x:Name="txtBoxSearch"
                      Width="290"
                      Height="20" Margin="73,60,217,30">
@@ -46,7 +44,10 @@
               
               >
 
-            <DataGrid x:Name="datagridCandidateList"></DataGrid>
+            <DataGrid x:Name="datagridCandidateList">
+                
+
+            </DataGrid>
         </Grid>
 
     </Grid>
