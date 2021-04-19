@@ -38,6 +38,11 @@ namespace UI_for_Project
 
             btnScoring.Style = IdlingStyle();
             btnStatistic.Style = IdlingStyle();
+
+            // model manipulation
+
+
+
         }
         private void btnScoring_Click(object sender, RoutedEventArgs e)
         {
@@ -52,17 +57,23 @@ namespace UI_for_Project
 
             btnCandidate.Style = IdlingStyle();
             btnStatistic.Style = IdlingStyle();
+
+            // model manipulation
         }
 
         private void btnStatistic_Click(object sender,RoutedEventArgs e)
-        {
+        {   
             btnStatistic.Style = SelectingStyle();
 
+            // remove current content on the page
             Holder.Content = null;
             while (Holder.NavigationService.RemoveBackEntry() != null) ;
 
+            // style changing
             btnCandidate.Style = IdlingStyle();
             btnScoring.Style = IdlingStyle();
+
+            // model manipulation
         }
 
         // Log Out event
@@ -74,10 +85,11 @@ namespace UI_for_Project
         // changing Style for EveryButton
         Style SelectingStyle()
         {
+            // to selected style
             return FindResource("FunctionBtn_Selected") as Style;
         }
         Style IdlingStyle()
-        {
+        {   // to idel style ( when selecting another )
             return FindResource("FunctionBtn_Idle") as Style;
         }
 

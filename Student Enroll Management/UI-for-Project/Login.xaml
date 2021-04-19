@@ -1,0 +1,17 @@
+﻿<Window x:Class="UI_for_Project.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_for_Project"
+        mc:Ignorable="d"
+        Title="Login" Height="450" Width="400">
+    <Grid>
+        <TextBlock Width="70" Height="20" Margin="100,123,230,291"> Username </TextBlock>
+        <TextBlock Width="70" Height="20" Margin="100,182,230,232"> Password</TextBlock>
+        <TextBox  x:Name="txtUserName"
+                  Width="200" Height="30" Margin="100,143,100,261"></TextBox>
+        <PasswordBox x:Name="txtPassword" Height="30" Width="200" Margin="100,202,100,202"></PasswordBox>
+        <Button x:Name="btnLogin" Width="200" Height="50" Margin="100,320,100,64" FontSize="30" Background="#f72585" Foreground="#e0fbfc"> LOGIN </Button>
+    </Grid>
+</Window>
