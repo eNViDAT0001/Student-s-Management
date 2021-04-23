@@ -1,0 +1,261 @@
+﻿<Window x:Class="UI_for_Project.RegisterEditing"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI_for_Project"
+        mc:Ignorable="d"
+        Title="RegisterEditing" Height="400" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid
+            Grid.Row="2"
+            Grid.Column="0">
+            
+            <TextBox Width="200"
+                     Height="25" Margin="0,13,100,0"
+                       x:Name="txtbTokenId"
+                     ></TextBox>
+            <TextBlock
+              
+                Width="100"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Register Token Id :</TextBlock>
+        </Grid>
+        <Grid
+            Grid.Row="3"
+            Grid.Column="0">
+
+            <TextBox 
+                     x:Name="txtbGrade"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0"
+                     ></TextBox>
+            <TextBlock
+                Width="100"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Grade :</TextBlock>
+        </Grid>
+
+        <Grid
+            Grid.Row="4"
+            Grid.Column="0">
+
+            <TextBox 
+                     x:Name="txtbFullName"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0"
+                     ></TextBox>
+            <TextBlock
+               
+                Width="100"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Full Name :</TextBlock>
+        </Grid>
+
+        <Grid
+            Grid.Row="5"
+            Grid.Column="0">
+
+            <TextBox 
+                     x:Name="txtbDateofBirth"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0"
+                     ></TextBox>
+            <TextBlock
+                
+                Width="100"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Date of Birth :</TextBlock>
+        </Grid>
+
+        <Grid
+            Grid.Row="6"
+            Grid.Column="0">
+
+            <TextBox 
+                     x:Name="txtYearOfSecondaryGraduation"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0"
+                     ></TextBox>
+            <TextBlock
+                
+                Width="200"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Year of Secondary Graduation :</TextBlock>
+        </Grid>
+
+        <Grid
+            Grid.Row="7"
+            Grid.Column="0">
+
+            
+            <TextBlock
+              
+                Width="200"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Secondary Subsystem :</TextBlock>
+            <ComboBox
+                     x:Name="cbxSecondarySubsystem"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0" SelectionChanged="cbxSecondarySubsystem_SelectionChanged">
+                <ComboBoxItem IsSelected="True">Gifted</ComboBoxItem>
+                <ComboBoxItem >Non-gifted</ComboBoxItem>
+            </ComboBox>
+        </Grid>
+
+        <Grid
+            Grid.Row="8"
+            Grid.Column="0">
+
+            <TextBox 
+                     x:Name="txtAnnounceAddress"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0"
+                     ></TextBox>
+            <TextBlock
+                
+                Width="200"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Announce Address : </TextBlock>
+        </Grid>
+
+        <Grid
+            Grid.Row="2"
+            Grid.Column="1">
+
+            <TextBox 
+                     x:Name="txtRegisterSchoolId"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0"
+                     ></TextBox>
+            <TextBlock
+                
+                Width="200"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Desired Institute Id :</TextBlock>
+        </Grid>
+        
+        <Grid
+            Grid.Row="3"
+            Grid.Column="1">
+
+            <TextBox 
+                     x:Name="txtSpecialityId"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0"
+                     ></TextBox>
+            <TextBlock
+                
+                Width="200"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Speciality Id :</TextBlock>
+        </Grid>
+
+        <Grid
+            Grid.Row="4"
+            Grid.Column="1">
+
+            <TextBox 
+                     x:Name="txtPlaceOfBirth"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0"
+                     ></TextBox>
+            <TextBlock
+                
+                Width="200"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Place of Birth :</TextBlock>
+        </Grid>
+
+        <Grid
+            Grid.Row="5"
+            Grid.Column="1">
+
+            <TextBox 
+                     x:Name="txtPermanentResidence"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0"
+                     ></TextBox>
+            <TextBlock
+                
+                Width="200"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Permanent Residence :</TextBlock>
+        </Grid>
+
+        <Grid
+            Grid.Row="6"
+            Grid.Column="1">
+
+            <TextBox 
+                     x:Name="txtTypeId"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0"
+                     ></TextBox>
+            <TextBlock
+                
+                Width="200"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Type Id :</TextBlock>
+        </Grid>
+
+        <Grid
+            Grid.Row="7"
+            Grid.Column="1">
+            <TextBlock
+              
+                Width="200"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top">Secondary Subsystem :</TextBlock>
+            <ComboBox
+                     x:Name="cbxRegisteringSubsystem"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0" SelectionChanged="cbxSecondarySubsystem_SelectionChanged">
+                <ComboBoxItem IsSelected="True">Gifted</ComboBoxItem>
+                <ComboBoxItem >Non-gifted</ComboBoxItem>
+            </ComboBox>
+        </Grid>
+
+        <Button Grid.Column="0" Grid.Row="9"
+                x:Name="btnSubmit"
+                Background="#1d3557"
+                Foreground="#f1faee"
+                Content="SUBMIT"
+                FontSize="25"/>
+        <Button Grid.Column="1" Grid.Row="9"
+                x:Name="btnCancel"
+                Background="#e63946"
+                Foreground="#f1faee"
+                Content="SUBMIT"
+                FontSize="25"/>
+    </Grid>
+</Window>

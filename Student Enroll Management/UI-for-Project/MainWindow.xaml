@@ -28,8 +28,10 @@
         				BorderBrush="#09BC8A" 
         				CornerRadius="3" >
                             <Grid>
-                                <ContentPresenter HorizontalAlignment="Center" 
-                                    VerticalAlignment="Center" Name="content"/>
+                                <ContentPresenter HorizontalAlignment="Center"
+                                                  
+                                    VerticalAlignment="Center"
+                                                  Name="content"/>
                             </Grid>
                         </Border>
                     </ControlTemplate>
