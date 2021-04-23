@@ -23,6 +23,11 @@ namespace UI_for_Project
         public MainWindow()
         {
             InitializeComponent();
+
+            var loginWindow = new Login();
+            loginWindow.Show();
+            this.Close();
+
         }
         // functional menu button events
         private void btnCandidate_Click(object sender, RoutedEventArgs e)

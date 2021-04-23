@@ -6,12 +6,78 @@
         xmlns:local="clr-namespace:UI_for_Project"
         mc:Ignorable="d"
         Title="Login" Height="450" Width="400">
+    <Window.Resources>
+        <Style  TargetType="Button">
+
+
+            <Setter Property="Control.Foreground" Value="#09BC8A"/>
+            <Setter Property="Background" Value="#09BC8A"/>
+            <Setter Property="Control.Width" Value="200"/>
+            <Setter Property="Control.Height" Value="50"/>
+
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                                Background="#1d3557"
+        				BorderThickness="1"
+        				Padding="4,2" 
+        				BorderBrush="#1d3557" 
+        				CornerRadius="3" >
+                            <Grid>
+                                <ContentPresenter HorizontalAlignment="Center"
+                                                  
+                                    VerticalAlignment="Center"
+                                                  Name="content"/>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+
+        </Style>
+    </Window.Resources>
     <Grid>
-        <TextBlock Width="70" Height="20" Margin="100,123,230,291"> Username </TextBlock>
-        <TextBlock Width="70" Height="20" Margin="100,182,230,232"> Password</TextBlock>
-        <TextBox  x:Name="txtUserName"
-                  Width="200" Height="30" Margin="100,143,100,261"></TextBox>
-        <PasswordBox x:Name="txtPassword" Height="30" Width="200" Margin="100,202,100,202"></PasswordBox>
-        <Button x:Name="btnLogin" Width="200" Height="50" Margin="100,320,100,64" FontSize="30" Background="#f72585" Foreground="#e0fbfc"> LOGIN </Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid Width="200"
+              Height="100">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock Width="70" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"> Username</TextBlock>
+                    <TextBox  x:Name="txtUserName" 
+                              Padding="0"
+                              VerticalAlignment="Bottom"
+                              FontSize="15"
+                              HorizontalAlignment="Left"
+                  Width="200" Height="20" ></TextBox>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBlock Width="70" Height="15" VerticalAlignment="Top" HorizontalAlignment="Left"> Password</TextBlock>
+                    <PasswordBox x:Name="txtPassword"
+                                 FontSize="15"
+                                 Padding="0"
+                                 Height="20" Width="200" VerticalAlignment="Bottom" HorizontalAlignment="Left"></PasswordBox>
+                </Grid>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid Width="200" Height="50" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Button x:Name="btnLogin" Width="200" Height="50" FontSize="30" Background="#f72585" Foreground="#e0fbfc">LOGIN</Button>
+            </Grid>
+
+        </Grid>
+      
+       
+
     </Grid>
 </Window>

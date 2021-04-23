@@ -49,3 +49,9 @@ D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\n
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.dll
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.pdb
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.genruntimeconfig.cache
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\ExamRegister.g.cs
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Login.g.cs
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\RegisterEditing.g.cs
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\ExamRegister.baml
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Login.baml
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\RegisterEditing.baml
