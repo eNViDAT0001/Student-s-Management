@@ -255,7 +255,7 @@
                 x:Name="btnCancel"
                 Background="#e63946"
                 Foreground="#f1faee"
-                Content="SUBMIT"
-                FontSize="25"/>
+                Content="CANCEL"
+                FontSize="25" Height="38" VerticalAlignment="Top"/>
     </Grid>
 </Window>

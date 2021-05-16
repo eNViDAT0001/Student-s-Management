@@ -1,0 +1,51 @@
+﻿<Page x:Class="UI_for_Project.EditScoring"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UI_for_Project"
+      mc:Ignorable="d" 
+      d:DesignHeight="400" d:DesignWidth="580"
+      ShowsNavigationUI="False"
+      Title="EditScoring">
+
+    <Grid  Width="580" Height="400"
+           >
+        <Grid
+            Width="580" Height="110"
+            Background="White" VerticalAlignment="Top">
+            
+            <TextBox x:Name="txtBoxSearch"
+                     Width="290"
+                     Height="20" Margin="73,60,217,30">
+
+            </TextBox>
+            <Button Width="20" Height="20" Background="Transparent" BorderThickness="0" RenderTransformOrigin="1.28,0.44" Margin="343,60,217,30">
+                
+                    <Image Source="image/search.png"></Image>
+                
+
+            </Button>
+            <Button Width="180" Height="50" x:Name="btnConfirm"
+                    BorderThickness="0"
+                    Background="#8F2D56"
+                    Foreground="#FFBC42" Margin="390,25,10,35">
+                CONFIRM
+            </Button>
+           
+        </Grid>
+        <Grid Width="570" Height="278"
+              Background="White" VerticalAlignment="Bottom"
+              HorizontalAlignment="Center"
+              
+              >
+
+            <DataGrid x:Name="datagridScore">
+                
+
+            </DataGrid>
+        </Grid>
+
+    </Grid>
+
+</Page>
