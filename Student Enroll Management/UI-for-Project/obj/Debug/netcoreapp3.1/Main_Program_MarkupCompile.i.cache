@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\App.xaml
-71143678963
+8149293880
 
-121761571866
+131455899760
 192-1533232326
-CandidateList.xaml;ExamRegister.xaml;Login.xaml;MainWindow.xaml;RegisterEditing.xaml;Scoring.xaml;SubjectButton.xaml;
+CandidateList.xaml;EditScoring.xaml;ExamRegister.xaml;Login.xaml;MainWindow.xaml;RegisterEditing.xaml;Scoring.xaml;SubjectButton.xaml;
 
 True
 
