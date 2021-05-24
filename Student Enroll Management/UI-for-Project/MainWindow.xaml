@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI_for_Project"
         mc:Ignorable="d"
-        Title="Student Enroll Management" Height="450" Width="800"
+        Title="Student Enroll Management" Height="450" Width="800" Loaded="Window_Loaded"
         >
     <Window.Resources>
         <!--
@@ -140,8 +140,9 @@
                 x:Name="btnLogOut"
                 Click="LogOut"
                 Style="{StaticResource LogOut}" VerticalAlignment="Bottom"
+                Content="LOG OUT"
                     >
-                LOG OUT
+                
             </Button>
 
         </Grid>

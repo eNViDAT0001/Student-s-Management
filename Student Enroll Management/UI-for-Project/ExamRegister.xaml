@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI_for_Project"
         mc:Ignorable="d"
-        Title="ExamRegister" Height="450" Width="800">
+        Title="ExamRegister" Height="450" Width="800" Loaded="Window_Loaded">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#d62828"/>
@@ -13,11 +13,12 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Button x:Name="btnLoad" Width="100" Height="50" HorizontalAlignment="Left" Margin="0,254,0,130" FontSize="10"> Load From Database</Button>
-        <Button x:Name="btnSave" Width="100" Height="50" HorizontalAlignment="Left"> Save To Database</Button>
+        <Button x:Name="btnLoad" Width="100" Height="50" HorizontalAlignment="Left" Margin="0,254,0,130" FontSize="10" Click="btnLoad_Click"> Load From Database</Button>
+        <Button x:Name="btnSave" Width="100" Height="50" HorizontalAlignment="Left" Click="btnSave_Click"> Save To Database</Button>
         <TextBlock FontFamily="Roboto" FontSize="30"> REGISTERING INFORMATION</TextBlock>
 
-        <DataGrid Width="600" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center"
+        <DataGrid x:Name="dataGrid"
+                  Width="600" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" RowEditEnding="dataGrid_RowEditEnding"
                  >
         </DataGrid>
 
@@ -25,23 +26,23 @@
                 Width="100"
                 Height="50" Margin="100,374,600,10"
                 FontSize="20"
-                FontFamily="Roboto">REMOVE</Button>
+                FontFamily="Roboto" Click="btnRemove_Click">REMOVE</Button>
         <Button x:Name="btnAdd"
                 Width="100"
                 Height="50" Margin="214,374,486,10"
                 FontSize="20"
-                FontFamily="Roboto">ADD</Button>
+                FontFamily="Roboto" Click="btnAdd_Click">ADD</Button>
         <Button x:Name="btnEdit"
                 Width="100"
                 Height="50" Margin="330,374,370,10"
                 FontSize="20"
-                FontFamily="Roboto">EDIT</Button>
+                FontFamily="Roboto" Click="btnEdit_Click">EDIT</Button>
 
         <Button x:Name="btnFinishRegister"
                 Width="150"
                 Height="50"
                 Background="#1d3557"
-                Foreground="#f1faee" Margin="550,372,100,12"> FINISH REGISTERING
+                Foreground="#f1faee" Margin="550,372,100,12" Click="btnFinishRegister_Click"> FINISH REGISTERING
                 
         </Button>
         

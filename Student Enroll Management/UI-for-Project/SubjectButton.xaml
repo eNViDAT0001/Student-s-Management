@@ -10,7 +10,7 @@
         <Button x:Name="btnS1"
                 Width="90"
                 Height="60"
-                Background="#127475"
+                Background="#127475" Click="btnS1_Click"
                 >
             <StackPanel Orientation="Vertical">
                 <TextBlock x:Name="txtSubjectName" Foreground="#F5DFBB" FontFamily="Roboto" FontSize="12"> SUBJECT 1</TextBlock>

@@ -10,6 +10,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+using UI_for_Project.Controller;
+using System.Printing;
+using System.IO;
+using System.Diagnostics;
+using Microsoft.Win32;
+using UI_for_Project.Model;
 
 namespace UI_for_Project
 {
@@ -18,67 +27,145 @@ namespace UI_for_Project
     /// </summary>
     public partial class CandidateList : Page
     {
-        public class CandidateData
-        {
-           public int Id { get; set; }
-            public string Name { get; set; }
-            public string DoB { get; set; }
 
-            public string PoB { get; set; }
-
-            public string Address { get; set; }
-
-            
-        }
         public CandidateList()
         {
             InitializeComponent();
-            //// id
-            //DataGridTextColumn candidate_id = new DataGridTextColumn();
-            //candidate_id.Header = "Id";
-            //candidate_id.Binding = new Binding("Id");
-            //candidate_id.Width = 50;
-            //datagridCandidateList.Columns.Add(candidate_id);
+        }
 
-            //// name
-            //DataGridTextColumn candidate_name = new DataGridTextColumn();
-            //candidate_name.Header = "Name";
-            //candidate_name.Binding = new Binding("Name");
-            //candidate_name.Width = 100;
-            //datagridCandidateList.Columns.Add(candidate_name);
-            //// date of birth
-            //DataGridTextColumn candidate_dob = new DataGridTextColumn();
-            //candidate_dob.Header = "Date of Birth";
-            //candidate_dob.Binding = new Binding("DoB");
-            //candidate_dob.Width = 90;
-            //datagridCandidateList.Columns.Add(candidate_dob);
+        //SqlConnection connection;
+        //SqlCommand command;
+        //string str = @"Data Source=PCHIEU\SQLEXPRESS;Initial Catalog=QLTuyenSinh;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+        //SqlDataAdapter adapter = new SqlDataAdapter();
+        //DataTable table = new DataTable();
+        private DataGridTextColumn AddColumn(string header, string nameBinding,int width)
+        {
+            //<DataGridTextColumn Binding="{Binding so_bao_danh }" Header="so_bao_danh" Width="80"/>
+            DataGridTextColumn tc = new DataGridTextColumn();
+            tc.Header = header;
+            tc.Width = width;
+            Binding tcBinding = new Binding(nameBinding);
+            tc.Binding = tcBinding;
+            return tc;
+        }
+
+        void setConfirm_to_LoadData()
+        {
+            // ĐÃ CHẤM HẾT ĐIỂM CHƯA
+            if(confirmEditScoring.confirmAllSubject()== true)
+            {
+
+            }
+            else
+            {
+                // NẾU CHƯA CONFIRM HẾT TÚI CHẤM THI THÌ HIỂN THỊ NHƯ NÀY
+                if (confirmEditScoring.confirmAllSubject() == false)
+                {
+                    datagridCandidateList.Columns.Add(AddColumn("so_bao_danh", "so_bao_danh", 80));
+                    datagridCandidateList.Columns.Add(AddColumn("ho_ten", "ho_ten", 130));
+                    datagridCandidateList.Columns.Add(AddColumn("ngay_thi", "ngay_thi", 120));
+                    datagridCandidateList.Columns.Add(AddColumn("so_phong_thi", "so_phong_thi", 90));
+                    datagridCandidateList.Columns.Add(AddColumn("dia_diem_thi", "dia_diem_thi", 200));
+
+                    string Get_Data = "select THI_SINH.so_bao_danh,ho_ten, ngay_thi,so_phong_thi,dia_diem_thi from THI_SINH, GIAY_BAO_THI";
+                    string getTable = "THI_SINH,GIAY_BAO_THI";
+
+                    Upload_Data_fromSql_toDataGrid uploadData_candidatalist = new Upload_Data_fromSql_toDataGrid(Get_Data, datagridCandidateList, getTable);
+                    uploadData_candidatalist.setData();
+                }
+                // CÒN CONFIRM HẾT RỒI THÌ HIỂN THỊ NHƯ NÀY 
+                else
+                {
+                    // THÊM DỮ LIỆU VÀO BẢNG KET_QUA_TUYEN_SINH KHI ĐÃ CHẤM ĐIỂM XONG 
+                    confirmEditScoring.insertKET_QUA_TUYEN_SINH();
+
+                    datagridCandidateList.Columns.Add(AddColumn("so_bao_danh", "so_bao_danh", 80));
+                    datagridCandidateList.Columns.Add(AddColumn("ma_nganh", "ma_nganh", 130));
+                    datagridCandidateList.Columns.Add(AddColumn("tong_diem", "tong_diem", 120));
+                    datagridCandidateList.Columns.Add(AddColumn("trung_tuyen", "trung_tuyen", 90));
+
+                    string Get_Data = "select * from KET_QUA_TUYEN_SINH";
+                    string getTable = "KET_QUA_TUYEN_SINH";
+
+                    Upload_Data_fromSql_toDataGrid uploadData_candidatalist = new Upload_Data_fromSql_toDataGrid(Get_Data, datagridCandidateList, getTable);
+                    uploadData_candidatalist.setData();
+
+                }
+            }
+        }
+        void loadData()
+        {
+            setConfirm_to_LoadData();
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            loadData();
+        }
+
+        private void txtBoxSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            bool selected = false;
+            // nhấn enter cái khung serch thì mình sẽ tìm theo tên hoặc theo số báo danh
+            if (e.Key == Key.Enter)
+            {
+                datagridCandidateList.SelectedItems.Clear();
+
+                foreach (DataRowView row in datagridCandidateList.ItemsSource)
+                {
+                    if (row["so_bao_danh"].Equals(txtBoxSearch.Text))
+                    {
+                        //datagridCandidateList.SelectedItem = row;
+                        //datagridCandidateList.ScrollIntoView(row);
+                        //datagridCandidateList.Focus();
+
+                        // chọn tất cả các số báo banh giống với cái đc nhập
+                        datagridCandidateList.SelectedItems.Add(row);
+                        datagridCandidateList.Focus();
+                        selected = true;
+                    }
+                }
+
+                foreach (DataRowView row in datagridCandidateList.ItemsSource)
+                {
+                    if (toLowerName(row["ho_ten"].ToString()).Contains(toLowerName(txtBoxSearch.Text)))
+                    {
+                        //datagridCandidateList.SelectedItem = row;
+                        //datagridCandidateList.ScrollIntoView(row);
+                        //datagridCandidateList.Focus();
+
+                        // chọn tất cả các tên giống với cái đc nhập
+                        datagridCandidateList.SelectedItems.Add(row);
+                        datagridCandidateList.Focus();
+                        selected = true;
+                    }
+                }
+                // nếu k có cái nào cần tìm thì thông báo k tìm đc
+                if (selected == false)
+                    MessageBox.Show("There is no item that matches your request.\n\nPlease re - enter.");
+
+            }
+        }
+        public string toLowerName(string name)
+        {
+            string[] arrname = name.Split(" ");
+            string arrnameLower = "";
 
 
+            for (int i = 0; i < arrname.Length; i++)
+            {
+                arrnameLower += arrname[i].ToLower() + " ";
+            }
 
-            //// place of birth
-            //DataGridTextColumn candidate_pob = new DataGridTextColumn();
-            //candidate_pob.Header = "Place of Birth";
-            //candidate_pob.Binding = new Binding("Pob");
-            //candidate_pob.Width = 150;
-            //datagridCandidateList.Columns.Add(candidate_pob);
+            return arrnameLower.Trim();
+        }
 
+        private void BtnPrint_Click(object sender, RoutedEventArgs e)
+        {
+            //ExportToExcelAndCsv();
 
-            //// address
-            //DataGridTextColumn candidate_anouce_addrr = new DataGridTextColumn();
-            //candidate_anouce_addrr.Header = "Announce Address";
-            //candidate_anouce_addrr.Binding = new Binding("Address");
-            //candidate_anouce_addrr.Width = 150;
-            //datagridCandidateList.Columns.Add(candidate_anouce_addrr);
-            datagridCandidateList.IsReadOnly = true;
-            
-            List<CandidateData> lCandidate = new List<CandidateData>();
-            datagridCandidateList.ItemsSource = lCandidate;
-
-           
-
-
-           
-            
+            datagridCandidateList.ExportToExcel(this.ToString());
         }
     }
 }

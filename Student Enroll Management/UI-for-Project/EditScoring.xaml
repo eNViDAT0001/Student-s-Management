@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="400" d:DesignWidth="580"
       ShowsNavigationUI="False"
-      Title="EditScoring">
+      Title="EditScoring" Loaded="Page_Loaded">
 
     <Grid  Width="580" Height="400"
            >
@@ -29,7 +29,7 @@
             <Button Width="180" Height="50" x:Name="btnConfirm"
                     BorderThickness="0"
                     Background="#8F2D56"
-                    Foreground="#FFBC42" Margin="390,25,10,35">
+                    Foreground="#FFBC42" Margin="390,25,10,35" Click="btnConfirm_Click">
                 CONFIRM
             </Button>
            
@@ -40,8 +40,16 @@
               
               >
 
-            <DataGrid x:Name="datagridScore">
-                
+            <DataGrid x:Name="datagridScore"
+                      AutoGenerateColumns="False" RowEditEnding="datagridScore_RowEditEnding">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding so_phach }" Header="so_phach" Width="80" IsReadOnly="True"/>
+                    <DataGridTextColumn Binding="{Binding diem_thi }" Header="diem_thi" Width="130"/>
+                    <DataGridTextColumn Binding="{Binding ma_mon }" Header="ma_mon" Width="130"/>
+                   
+
+                    
+                </DataGrid.Columns>
 
             </DataGrid>
         </Grid>

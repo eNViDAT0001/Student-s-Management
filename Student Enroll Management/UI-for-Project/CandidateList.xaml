@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="400" d:DesignWidth="580"
       ShowsNavigationUI="False"
-      Title="CandidateList">
+      Title="CandidateList" Loaded="Page_Loaded">
 
     <Grid  Width="580" Height="400"
            >
@@ -21,7 +21,7 @@
                     Margin="73,25,427,55" Content="Arrange Room"/>
             <TextBox x:Name="txtBoxSearch"
                      Width="290"
-                     Height="20" Margin="73,60,217,30">
+                     Height="20" Margin="73,60,217,30" KeyDown="txtBoxSearch_KeyDown">
 
             </TextBox>
             <Button Width="20" Height="20" Background="Transparent" BorderThickness="0" RenderTransformOrigin="1.28,0.44" Margin="343,60,217,30">
@@ -33,7 +33,7 @@
             <Button Width="180" Height="50" x:Name="BtnPrint"
                     BorderThickness="0"
                     Background="#8F2D56"
-                    Foreground="#FFBC42" Margin="390,25,10,35">
+                    Foreground="#FFBC42" Margin="390,25,10,35" Click="BtnPrint_Click">
                 PRINT
             </Button>
            
@@ -41,11 +41,19 @@
         <Grid Width="570" Height="278"
               Background="White" VerticalAlignment="Bottom"
               HorizontalAlignment="Center"
-              
               >
-
-            <DataGrid x:Name="datagridCandidateList">
-                
+            <DataGrid x:Name="datagridCandidateList" AutoGenerateColumns="False" 
+                      ClipboardCopyMode="IncludeHeader"
+                      IsReadOnly="True"
+                      SelectionMode="Extended">
+                <DataGrid.Columns>
+                    <!--<DataGridTextColumn Binding="{Binding so_bao_danh }" Header="so_bao_danh" Width="80"/>
+                    <DataGridTextColumn Binding="{Binding ho_ten }" Header="ho_ten" Width="130"/>
+                    <DataGridTextColumn Binding="{Binding ngay_thi }" Header="ngay_thi" Width="120"/>
+                    <DataGridTextColumn Binding="{Binding so_phong_thi }" Header="so_phong_thi" Width="90"/>
+                    
+                    <DataGridTextColumn Binding="{Binding dia_diem_thi }" Header="dia_diem_thi" Width="200"/>-->
+                </DataGrid.Columns>
 
             </DataGrid>
         </Grid>

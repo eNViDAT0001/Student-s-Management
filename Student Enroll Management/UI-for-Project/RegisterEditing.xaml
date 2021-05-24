@@ -29,29 +29,33 @@
             
             <TextBox Width="200"
                      Height="25" Margin="0,13,100,0"
-                       x:Name="txtbTokenId"
+                       x:Name="txtbSo_phieu"
                      ></TextBox>
             <TextBlock
-              
                 Width="100"
                 Height="15"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top">Register Token Id :</TextBlock>
+                VerticalAlignment="Top">Số phiếu :</TextBlock>
         </Grid>
         <Grid
             Grid.Row="3"
             Grid.Column="0">
-
-            <TextBox 
-                     x:Name="txtbGrade"
-                     Width="200"
-                     Height="25" Margin="0,13,100,0"
-                     ></TextBox>
             <TextBlock
                 Width="100"
                 Height="15"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top">Grade :</TextBlock>
+                VerticalAlignment="Top">Khối thi :</TextBlock>
+            <ComboBox
+                     x:Name="cbxKhoi_thi"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0" SelectionChanged="cbxKhoi_thi_SelectionChanged">
+                <ComboBoxItem IsSelected="True">A00</ComboBoxItem>
+                <ComboBoxItem >A01</ComboBoxItem>
+                <ComboBoxItem >D01</ComboBoxItem>
+                <ComboBoxItem >D07</ComboBoxItem>
+                <ComboBoxItem >C20</ComboBoxItem>
+                <ComboBoxItem >C12</ComboBoxItem>
+            </ComboBox>
         </Grid>
 
         <Grid
@@ -59,7 +63,7 @@
             Grid.Column="0">
 
             <TextBox 
-                     x:Name="txtbFullName"
+                     x:Name="txtbHo_va_ten"
                      Width="200"
                      Height="25" Margin="0,13,100,0"
                      ></TextBox>
@@ -68,7 +72,7 @@
                 Width="100"
                 Height="15"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top">Full Name :</TextBlock>
+                VerticalAlignment="Top">Họ và tên :</TextBlock>
         </Grid>
 
         <Grid
@@ -76,7 +80,7 @@
             Grid.Column="0">
 
             <TextBox 
-                     x:Name="txtbDateofBirth"
+                     x:Name="txtbHe_dao_tao"
                      Width="200"
                      Height="25" Margin="0,13,100,0"
                      ></TextBox>
@@ -85,7 +89,7 @@
                 Width="100"
                 Height="15"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top">Date of Birth :</TextBlock>
+                VerticalAlignment="Top">Hệ đào tạo :</TextBlock>
         </Grid>
 
         <Grid
@@ -93,7 +97,7 @@
             Grid.Column="0">
 
             <TextBox 
-                     x:Name="txtYearOfSecondaryGraduation"
+                     x:Name="txtNam_tot_nghiep"
                      Width="200"
                      Height="25" Margin="0,13,100,0"
                      ></TextBox>
@@ -102,26 +106,28 @@
                 Width="200"
                 Height="15"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top">Year of Secondary Graduation :</TextBlock>
+                VerticalAlignment="Top">Năm tốt nghiệp :</TextBlock>
         </Grid>
 
         <Grid
             Grid.Row="7"
             Grid.Column="0">
 
-            
+
             <TextBlock
               
                 Width="200"
                 Height="15"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top">Secondary Subsystem :</TextBlock>
+                VerticalAlignment="Top">Khu vực  :</TextBlock>
             <ComboBox
-                     x:Name="cbxSecondarySubsystem"
+                     x:Name="cbxKhu_vuc"
                      Width="200"
-                     Height="25" Margin="0,13,100,0" SelectionChanged="cbxSecondarySubsystem_SelectionChanged">
-                <ComboBoxItem IsSelected="True">Gifted</ComboBoxItem>
-                <ComboBoxItem >Non-gifted</ComboBoxItem>
+                     Height="25" Margin="0,13,100,0" SelectionChanged="cbxKhu_vuc_SelectionChanged">
+                <ComboBoxItem IsSelected="True">Khu vực 2NT</ComboBoxItem>
+                <ComboBoxItem >Khu vực 1</ComboBoxItem>
+                <ComboBoxItem >Khu vực 2</ComboBoxItem>
+                <ComboBoxItem >Khu vực 3</ComboBoxItem>
             </ComboBox>
         </Grid>
 
@@ -129,34 +135,25 @@
             Grid.Row="8"
             Grid.Column="0">
 
-            <TextBox 
-                     x:Name="txtAnnounceAddress"
-                     Width="200"
-                     Height="25" Margin="0,13,100,0"
-                     ></TextBox>
-            <TextBlock
-                
-                Width="200"
-                Height="15"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Top">Announce Address : </TextBlock>
         </Grid>
 
         <Grid
             Grid.Row="2"
             Grid.Column="1">
 
-            <TextBox 
-                     x:Name="txtRegisterSchoolId"
-                     Width="200"
-                     Height="25" Margin="0,13,100,0"
-                     ></TextBox>
             <TextBlock
-                
+              
                 Width="200"
                 Height="15"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top">Desired Institute Id :</TextBlock>
+                VerticalAlignment="Top">Đăng kí thi :</TextBlock>
+            <ComboBox
+                     x:Name="cbxDang_ki_thi"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0" SelectionChanged="cbxDang_ki_thi_SelectionChanged">
+                <ComboBoxItem IsSelected="True">CB</ComboBoxItem>
+                <ComboBoxItem >KCB</ComboBoxItem>
+            </ComboBox>
         </Grid>
         
         <Grid
@@ -164,7 +161,7 @@
             Grid.Column="1">
 
             <TextBox 
-                     x:Name="txtSpecialityId"
+                     x:Name="txtMa_truong"
                      Width="200"
                      Height="25" Margin="0,13,100,0"
                      ></TextBox>
@@ -173,24 +170,32 @@
                 Width="200"
                 Height="15"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top">Speciality Id :</TextBlock>
+                VerticalAlignment="Top">Mã trường  :</TextBlock>
         </Grid>
 
         <Grid
             Grid.Row="4"
             Grid.Column="1">
-
-            <TextBox 
-                     x:Name="txtPlaceOfBirth"
-                     Width="200"
-                     Height="25" Margin="0,13,100,0"
-                     ></TextBox>
             <TextBlock
                 
                 Width="200"
                 Height="15"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top">Place of Birth :</TextBlock>
+                VerticalAlignment="Top">Mã ngành :</TextBlock>
+            <ComboBox
+                     x:Name="cbxMa_nganh"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0" SelectionChanged="cbxMa_nganh_SelectionChanged">
+                <ComboBoxItem IsSelected="True">7340122</ComboBoxItem>
+                <ComboBoxItem >7480101</ComboBoxItem>
+                <ComboBoxItem >7480102</ComboBoxItem>
+                <ComboBoxItem >7480103</ComboBoxItem>
+                <ComboBoxItem >7480104</ComboBoxItem>
+                <ComboBoxItem >7480106</ComboBoxItem>
+                <ComboBoxItem >7480109</ComboBoxItem>
+                <ComboBoxItem >7480201</ComboBoxItem>
+                <ComboBoxItem >7480202</ComboBoxItem>
+            </ComboBox>
         </Grid>
 
         <Grid
@@ -198,7 +203,7 @@
             Grid.Column="1">
 
             <TextBox 
-                     x:Name="txtPermanentResidence"
+                     x:Name="txtNgay_sinh"
                      Width="200"
                      Height="25" Margin="0,13,100,0"
                      ></TextBox>
@@ -207,7 +212,7 @@
                 Width="200"
                 Height="15"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top">Permanent Residence :</TextBlock>
+                VerticalAlignment="Top">Ngày sinh :</TextBlock>
         </Grid>
 
         <Grid
@@ -215,7 +220,7 @@
             Grid.Column="1">
 
             <TextBox 
-                     x:Name="txtTypeId"
+                     x:Name="txtNoi_sinh"
                      Width="200"
                      Height="25" Margin="0,13,100,0"
                      ></TextBox>
@@ -224,25 +229,23 @@
                 Width="200"
                 Height="15"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top">Type Id :</TextBlock>
+                VerticalAlignment="Top">Nơi sinh :</TextBlock>
         </Grid>
 
         <Grid
             Grid.Row="7"
             Grid.Column="1">
+            <TextBox 
+                     x:Name="txtDia_chi_bao_tin"
+                     Width="200"
+                     Height="25" Margin="0,13,100,0"
+                     ></TextBox>
             <TextBlock
-              
+                
                 Width="200"
                 Height="15"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Top">Secondary Subsystem :</TextBlock>
-            <ComboBox
-                     x:Name="cbxRegisteringSubsystem"
-                     Width="200"
-                     Height="25" Margin="0,13,100,0" SelectionChanged="cbxSecondarySubsystem_SelectionChanged">
-                <ComboBoxItem IsSelected="True">Gifted</ComboBoxItem>
-                <ComboBoxItem >Non-gifted</ComboBoxItem>
-            </ComboBox>
+                VerticalAlignment="Top">Địa chỉ báo tin :</TextBlock>
         </Grid>
 
         <Button Grid.Column="0" Grid.Row="9"
@@ -250,12 +253,12 @@
                 Background="#1d3557"
                 Foreground="#f1faee"
                 Content="SUBMIT"
-                FontSize="25"/>
+                FontSize="25" Click="btnSubmit_Click"/>
         <Button Grid.Column="1" Grid.Row="9"
                 x:Name="btnCancel"
                 Background="#e63946"
                 Foreground="#f1faee"
                 Content="CANCEL"
-                FontSize="25" Height="38" VerticalAlignment="Top"/>
+                FontSize="25" Height="38" VerticalAlignment="Top" Click="btnCancel_Click"/>
     </Grid>
 </Window>

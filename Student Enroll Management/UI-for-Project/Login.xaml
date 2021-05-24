@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI_for_Project"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="400">
+        Title="Login" Height="450" Width="400" WindowStyle="None" >
     <Window.Resources>
         <Style  TargetType="Button">
 
@@ -65,14 +65,14 @@
                     <PasswordBox x:Name="txtPassword"
                                  FontSize="15"
                                  Padding="0"
-                                 Height="20" Width="200" VerticalAlignment="Bottom" HorizontalAlignment="Left"></PasswordBox>
+                                 Height="20" Width="200" VerticalAlignment="Bottom" HorizontalAlignment="Left"  KeyDown="txtPassword_KeyDown"></PasswordBox>
                 </Grid>
             </Grid>
         </Grid>
 
         <Grid Grid.Row="1">
             <Grid Width="200" Height="50" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <Button x:Name="btnLogin" Width="200" Height="50" FontSize="30" Background="#f72585" Foreground="#e0fbfc">LOGIN</Button>
+                <Button x:Name="btnLogin" Width="200" Height="50" FontSize="30" Background="#f72585" Foreground="#e0fbfc" Click="btnLogin_Click">LOGIN</Button>
             </Grid>
 
         </Grid>

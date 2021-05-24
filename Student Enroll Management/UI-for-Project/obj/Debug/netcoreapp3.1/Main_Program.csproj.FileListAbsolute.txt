@@ -55,3 +55,47 @@ D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\n
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\ExamRegister.baml
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Login.baml
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\RegisterEditing.baml
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\Main_Program.exe
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\Main_Program.dll
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\CandidateList.g.cs
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\EditScoring.g.cs
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\ExamRegister.g.cs
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Login.g.cs
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\RegisterEditing.g.cs
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Scoring.g.cs
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\SubjectButton.g.cs
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program_MarkupCompile.cache
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program_MarkupCompile.lref
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\Main_Program.deps.json
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\Main_Program.runtimeconfig.json
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\Main_Program.runtimeconfig.dev.json
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\Main_Program.pdb
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\CandidateList.baml
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\EditScoring.baml
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\ExamRegister.baml
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Login.baml
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\RegisterEditing.baml
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Scoring.baml
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\SubjectButton.baml
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.g.resources
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.csproj.CopyComplete
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.dll
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.pdb
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.genruntimeconfig.cache
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Statistic.g.cs
+C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Statistic.baml
