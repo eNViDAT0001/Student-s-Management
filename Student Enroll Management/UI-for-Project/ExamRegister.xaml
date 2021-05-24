@@ -18,6 +18,7 @@
         <TextBlock FontFamily="Roboto" FontSize="30"> REGISTERING INFORMATION</TextBlock>
 
         <DataGrid x:Name="dataGrid"
+                  AutoGenerateColumns="False"
                   Width="600" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" RowEditEnding="dataGrid_RowEditEnding"
                  >
         </DataGrid>
