@@ -15,10 +15,11 @@
     <Grid>
         <Button x:Name="btnLoad" Width="100" Height="50" HorizontalAlignment="Left" Margin="0,254,0,130" FontSize="10" Click="btnLoad_Click"> Load From Database</Button>
         <Button x:Name="btnSave" Width="100" Height="50" HorizontalAlignment="Left" Click="btnSave_Click"> Save To Database</Button>
-        <TextBlock FontFamily="Roboto" FontSize="30"> REGISTERING INFORMATION</TextBlock>
+        <TextBlock FontFamily="Roboto" FontSize="30" Margin="0,0,0,396"> REGISTERING INFORMATION</TextBlock>
 
         <DataGrid x:Name="dataGrid"
                   AutoGenerateColumns="False"
+                  
                   Width="600" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" RowEditEnding="dataGrid_RowEditEnding"
                  >
         </DataGrid>

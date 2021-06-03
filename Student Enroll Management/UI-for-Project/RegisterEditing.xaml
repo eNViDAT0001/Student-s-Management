@@ -49,7 +49,7 @@
                      x:Name="cbxKhoi_thi"
                      Width="200"
                      Height="25" Margin="0,13,100,0" SelectionChanged="cbxKhoi_thi_SelectionChanged">
-                <ComboBoxItem IsSelected="True">A00</ComboBoxItem>
+                <ComboBoxItem >A00</ComboBoxItem>
                 <ComboBoxItem >A01</ComboBoxItem>
                 <ComboBoxItem >D01</ComboBoxItem>
                 <ComboBoxItem >D07</ComboBoxItem>
@@ -124,7 +124,7 @@
                      x:Name="cbxKhu_vuc"
                      Width="200"
                      Height="25" Margin="0,13,100,0" SelectionChanged="cbxKhu_vuc_SelectionChanged">
-                <ComboBoxItem IsSelected="True">Khu vực 2NT</ComboBoxItem>
+                <ComboBoxItem >Khu vực 2NT</ComboBoxItem>
                 <ComboBoxItem >Khu vực 1</ComboBoxItem>
                 <ComboBoxItem >Khu vực 2</ComboBoxItem>
                 <ComboBoxItem >Khu vực 3</ComboBoxItem>
@@ -151,7 +151,7 @@
                      x:Name="cbxDang_ki_thi"
                      Width="200"
                      Height="25" Margin="0,13,100,0" SelectionChanged="cbxDang_ki_thi_SelectionChanged">
-                <ComboBoxItem IsSelected="True">CB</ComboBoxItem>
+                <ComboBoxItem >CB</ComboBoxItem>
                 <ComboBoxItem >KCB</ComboBoxItem>
             </ComboBox>
         </Grid>
@@ -186,7 +186,7 @@
                      x:Name="cbxMa_nganh"
                      Width="200"
                      Height="25" Margin="0,13,100,0" SelectionChanged="cbxMa_nganh_SelectionChanged">
-                <ComboBoxItem IsSelected="True">7340122</ComboBoxItem>
+                <ComboBoxItem >7340122</ComboBoxItem>
                 <ComboBoxItem >7480101</ComboBoxItem>
                 <ComboBoxItem >7480102</ComboBoxItem>
                 <ComboBoxItem >7480103</ComboBoxItem>

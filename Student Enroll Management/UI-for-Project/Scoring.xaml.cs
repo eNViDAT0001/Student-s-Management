@@ -105,7 +105,7 @@ namespace UI_for_Project
             Grid.SetColumn(sub_lichsu, 0);
             gridhieu.Children.Add(sub_lichsu);
 
-            SubjectButton sub_diali = new SubjectButton("Địa Lí", int.Parse(getNumberOfSubject.getNumberOfSubject_sql("Địa Lí")));
+            SubjectButton sub_diali = new SubjectButton("Địa Lý", int.Parse(getNumberOfSubject.getNumberOfSubject_sql("Địa Lý")));
             sub_diali.onClickDelegate = onOpenScoringEditingDelegate;
             Grid.SetRow(sub_diali, 2);
             Grid.SetColumn(sub_diali, 1);

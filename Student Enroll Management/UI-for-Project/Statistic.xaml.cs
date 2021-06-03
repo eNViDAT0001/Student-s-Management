@@ -35,7 +35,7 @@ namespace UI_for_Project
             highScore.Text = sqlStatistic.Point_MaxPoint_Subject("Toán");
 
             sumStdPass.Text = DiemChuan.sumDau_Rot().ToString();
-            PassRatio.Text = (DiemChuan.sumDau_Rot() / double.Parse( sqlStatistic.number_Candidate())).ToString() +"%";
+            PassRatio.Text = (DiemChuan.sumDau_Rot() / double.Parse( sqlStatistic.number_Candidate())*100).ToString() +"%";
         }
         
         private void SubjectCmbx_SelectionChanged(object sender, SelectionChangedEventArgs e)

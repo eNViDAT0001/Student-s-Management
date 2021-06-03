@@ -89,7 +89,8 @@ namespace UI_for_Project
             SqlCommandBuilder builder = new SqlCommandBuilder(da);
             da.UpdateCommand = builder.GetUpdateCommand();
             da.Update(dt);
-            con.Close();
+            
+            MessageBox.Show(" da update");
         }
         public void loadSQL()
         {
@@ -124,7 +125,43 @@ namespace UI_for_Project
 
         private void btnRemove_Click(object sender, RoutedEventArgs e)
         {
+            DataRowView drv = dataGrid.SelectedItem as DataRowView;
+            if (drv != null)
+            {
+                DataView dataView = dataGrid.ItemsSource as DataView;
+                hoten = drv[2].ToString();
+                noisinh = drv[11].ToString();
+                diachibaotin = drv[12].ToString();
+                //MessageBox.Show(drv[2].ToString());
+                dataView.Table.Rows.Remove(drv.Row);
+            }
+            // LẦN LƯỢT XÓA HẾT DỮ LIỆU CỦA CÁC BẢNG  PHIEU_DKDT, THI_SINH, GIAY_BAO_THI,BAI_THI, KET_QUA_CHAM_THI
+            string delete_so_bao_danh = getSo_Bao_Danh(hoten, noisinh, diachibaotin);
 
+            sqlExamRegister.deleteItemSelected_KET_QUA_CHAM_THI(delete_so_bao_danh);
+            sqlExamRegister.deleteItemSelected_BAI_THI(delete_so_bao_danh);
+            sqlExamRegister.deleteItemSelected_GIAY_BAO_THI(delete_so_bao_danh);
+            sqlExamRegister.deleteItemSelected_THI_SINH(delete_so_bao_danh);
+            sqlExamRegister.deletItemSelectede_PHIEU_DKDT(hoten,noisinh,diachibaotin);
+        }
+        string hoten;
+        string noisinh;
+        string diachibaotin;
+
+        public string getSo_Bao_Danh(string ho_ten, string noi_sinh, string dia_chi_bao_tin)
+        {
+            string so_bao_danh = "";
+            string Query = "select * from THI_SINH";
+            string nameTable = "THI_SINH";
+
+            DataTable dt = sqlDataTable.getDataTable(Query, nameTable);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                if ((string)row["ho_ten"] == ho_ten && (string)row["noi_sinh"] == noi_sinh && (string)row["dia_chi_bao_tin"] == dia_chi_bao_tin)
+                    so_bao_danh =(string) row["so_bao_danh"];
+            }
+            return so_bao_danh;
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -147,8 +184,6 @@ namespace UI_for_Project
                 con.Open();
 
                 SqlCommand cmd = con.CreateCommand();
-                
-
                 
                 string update = "update CONFIRM_REGISTER set confirm = 'true'";
                 cmd.CommandText = update;
@@ -174,5 +209,7 @@ namespace UI_for_Project
                 }
             }
         }
+
+       
     }
 }

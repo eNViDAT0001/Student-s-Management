@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -109,11 +110,12 @@ namespace UI_for_Project
                 this.Close();
             }
         }
-        // THÊM VÀO 3 BẢNG LÀ BẢNG PHIEU_DKDT, THI_SINH, GIAY_BAO_THI,BAI_THI, KET_QUA_CHAM_THI
+        // THÊM VÀO 5 BẢNG LÀ BẢNG PHIEU_DKDT, THI_SINH, GIAY_BAO_THI,BAI_THI, KET_QUA_CHAM_THI
         public void INSERT_SQL_PHIEU_DKDT()
         {
             // PHIEU_DKDT
-            string Query = string.Format("insert into PHIEU_DKDT values ('{0}','{1}', '{2}', '{3}', {4},'{5}', NULL, '{6}', '{7}', '{8}',CONVERT(smalldatetime,cast('{9}' as date),103), '{10}', '{11}')", txtbSo_phieu.Text, khoi_thi, txtbHo_va_ten.Text, khu_vuc.ToString(),int.Parse( txtNam_tot_nghiep.Text), txtbHe_dao_tao.Text, dang_khi_thi, txtMa_truong.Text, ma_nganh, txtNgay_sinh.Text, txtNoi_sinh.Text, txtDia_chi_bao_tin.Text);
+            string Query = string.Format("insert into PHIEU_DKDT values ('{0}','{1}', N'{2}', N'{3}', {4},N'{5}', NULL, N'{6}', '{7}', '{8}',CONVERT(smalldatetime,cast('{9}' as date),103), N'{10}', N'{11}')", txtbSo_phieu.Text, khoi_thi, txtbHo_va_ten.Text, khu_vuc.ToString(),int.Parse( txtNam_tot_nghiep.Text), txtbHe_dao_tao.Text, dang_khi_thi, txtMa_truong.Text, ma_nganh, txtNgay_sinh.Text, txtNoi_sinh.Text, txtDia_chi_bao_tin.Text);
+            Debug.WriteLine(Query);
 
             SqlConnection con = new SqlConnection(sqlConnection.CONNECTION);
             con.Open();
@@ -125,7 +127,7 @@ namespace UI_for_Project
         public void INSERT_SQL_THI_SINH()
         {
             so_bao_danh = sqlRegisterEditing.getNumber_Last_So_Bao_Danh();
-            string Query = string.Format("insert into THI_SINH values('{0}','{1}',CONVERT(smalldatetime,cast('{2}' as date)),'{3}','{4}')", so_bao_danh, txtbHo_va_ten.Text, txtNgay_sinh.Text, txtNoi_sinh.Text, txtDia_chi_bao_tin.Text);
+            string Query = string.Format("insert into THI_SINH values('{0}',N'{1}',CONVERT(smalldatetime,cast('{2}' as date)),N'{3}',N'{4}')", so_bao_danh, txtbHo_va_ten.Text, txtNgay_sinh.Text, txtNoi_sinh.Text, txtDia_chi_bao_tin.Text);
 
             SqlConnection con = new SqlConnection(sqlConnection.CONNECTION);
             con.Open();
@@ -136,7 +138,7 @@ namespace UI_for_Project
         }
         public void INSERT_SQL_GIAY_BAO_THI()
         {
-            string Query = string.Format("insert into GIAY_BAO_THI values ('{0}',CONVERT(smalldatetime,cast('{1}' as date)), '{2}', 'C101', 30000.0000)", so_bao_danh, txtNgay_sinh.Text,dia_diem_thi.ToString());
+            string Query = string.Format("insert into GIAY_BAO_THI values ('{0}',CONVERT(smalldatetime,cast('{1}' as date)), N'{2}', 'C101', 30000.0000)", so_bao_danh, txtNgay_sinh.Text,dia_diem_thi.ToString());
 
             SqlConnection con = new SqlConnection(sqlConnection.CONNECTION);
             con.Open();
