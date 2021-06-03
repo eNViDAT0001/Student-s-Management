@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using UI_for_Project.Controller;
+using UI_for_Project.Model;
 
 namespace UI_for_Project
 {
@@ -41,6 +43,11 @@ namespace UI_for_Project
             numCount = Count;
             txtSubjectName.Text = SubjectName;
             txtCount.Text = "Count : " + numCount;
+            // nếu đã nhập hết điểm thì đổi màu cái button
+            if (confirmEditScoring.confirmed(getNumber_TuongUng_Subject.getNumber(name)))
+                btnS1.Background = Brushes.Red;
+            else
+                btnS1.Background = Brushes.Green;
         }
 
         private void btnS1_Click(object sender, RoutedEventArgs e)

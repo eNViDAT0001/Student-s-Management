@@ -22,6 +22,22 @@
                   
                   Width="600" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" RowEditEnding="dataGrid_RowEditEnding"
                  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding so_phieu }" Header="Số phiếu(*)" Width="80" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding khoi_thi }" Header="Khối thi(*)" Width="80" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding ho_va_ten }" Header="Họ và tên" Width="120"/>
+                <DataGridTextColumn Binding="{Binding khu_vuc }" Header="Khu vực(*)" Width="120" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding nam_tot_nghiep }" Header="Năm tốt nghiệp(*)" Width="120" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding he_dao_tao }" Header="Hệ đào tạo(*)" Width="80" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding ma_doi_tuong }" Header="Mã đối tượng(*)" Width="80" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding dang_ky_thi }" Header="Đăng kí thi(*)" Width="80" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding ma_truong }" Header="Mã trường(*)" Width="80" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding ma_nganh }" Header="Mã ngành(*)" Width="100" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding ngay_sinh }" Header="Ngày sinh(*)" Width="100" IsReadOnly="True"/>
+                <DataGridTextColumn Binding="{Binding noi_sinh }" Header="Nơi sinh" Width="120"/>
+                <DataGridTextColumn Binding="{Binding dia_chi_bao_tin }" Header="Địa chỉ báo tin" Width="120"/>
+            </DataGrid.Columns>
+            
         </DataGrid>
 
         <Button x:Name="btnRemove"

@@ -44,19 +44,19 @@ namespace UI_for_Project
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            dataGrid.Columns.Add(AddColumn("Số phiếu", "so_phieu", 80));
-            dataGrid.Columns.Add(AddColumn("Khối thi", "khoi_thi", 80));
-            dataGrid.Columns.Add(AddColumn("Họ và tên", "ho_va_ten", 120));
-            dataGrid.Columns.Add(AddColumn("Khu vực", "khu_vuc", 120));
-            dataGrid.Columns.Add(AddColumn("Năm tốt nghiệp", "nam_tot_nghiep", 80));
-            dataGrid.Columns.Add(AddColumn("Hệ đào tạo", "he_dao_tao", 80));
-            dataGrid.Columns.Add(AddColumn("Mã đối tượng", "ma_doi_tuong", 80));
-            dataGrid.Columns.Add(AddColumn("Đăng kí thi", "dang_ki_thi", 80));
-            dataGrid.Columns.Add(AddColumn("Mã trường", "ma_truong", 80));
-            dataGrid.Columns.Add(AddColumn("Mã ngành", "ma_nganh", 100));
-            dataGrid.Columns.Add(AddColumn("Ngày sinh", "ngay_sinh", 100));
-            dataGrid.Columns.Add(AddColumn("Nơi sinh", "noi_sinh", 120));
-            dataGrid.Columns.Add(AddColumn("Địa chỉ báo tin", "dia_chi_bao_tin", 120));
+            //dataGrid.Columns.Add(AddColumn("Số phiếu", "so_phieu", 80));
+            //dataGrid.Columns.Add(AddColumn("Khối thi", "khoi_thi", 80));
+            //dataGrid.Columns.Add(AddColumn("Họ và tên", "ho_va_ten", 120));
+            //dataGrid.Columns.Add(AddColumn("Khu vực", "khu_vuc", 120));
+            //dataGrid.Columns.Add(AddColumn("Năm tốt nghiệp", "nam_tot_nghiep", 80));
+            //dataGrid.Columns.Add(AddColumn("Hệ đào tạo", "he_dao_tao", 80));
+            //dataGrid.Columns.Add(AddColumn("Mã đối tượng", "ma_doi_tuong", 80));
+            //dataGrid.Columns.Add(AddColumn("Đăng ky thi", "dang_ky_thi", 80));
+            //dataGrid.Columns.Add(AddColumn("Mã trường", "ma_truong", 80));
+            //dataGrid.Columns.Add(AddColumn("Mã ngành", "ma_nganh", 100));
+            //dataGrid.Columns.Add(AddColumn("Ngày sinh", "ngay_sinh", 100));
+            //dataGrid.Columns.Add(AddColumn("Nơi sinh", "noi_sinh", 120));
+            //dataGrid.Columns.Add(AddColumn("Địa chỉ báo tin", "dia_chi_bao_tin", 120));
 
             Query = "select * from PHIEU_DKDT";
             nameTable = "PHIEU_DKDT";
@@ -90,7 +90,7 @@ namespace UI_for_Project
             da.UpdateCommand = builder.GetUpdateCommand();
             da.Update(dt);
             
-            MessageBox.Show(" da update");
+            MessageBox.Show("Update.");
         }
         public void loadSQL()
         {
@@ -172,7 +172,7 @@ namespace UI_for_Project
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            
+            MessageBox.Show("EDITED.");
         }
 
         private void btnFinishRegister_Click(object sender, RoutedEventArgs e)

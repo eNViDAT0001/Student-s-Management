@@ -85,10 +85,10 @@ namespace UI_for_Project
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            if(Dien_Het_Chua()== false)
+            if(Dien_Het_Chua()== false || DUNG_CU_PHAP() == false)
             {
                 //MessageBox.Show("Please enter full information. ");
-                var Result = MessageBox.Show("Note", "Please enter full information.", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                var Result = MessageBox.Show("Note", "Please enter full and correct information.", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (Result == MessageBoxResult.Yes)
                 {
 
@@ -202,6 +202,33 @@ namespace UI_for_Project
             }
             else
                 return true;
+        }
+        public bool DUNG_CU_PHAP()
+        {
+          
+            int daugach = 0;
+            int ngaythangnam = 0;
+            
+            string ngaysinh = txtNgay_sinh.Text.ToString();
+            for(int i = 0; i < ngaysinh.Length; i++)
+            {
+                if (ngaysinh[i].ToString().Equals("/"))
+                    daugach++;
+            }
+
+            string [] arr= ngaysinh.Split(new[] { '/' });
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int my;
+                if (int.TryParse(arr[i], out my))
+                    ngaythangnam++;
+            }
+            int my1;
+            if (daugach == 2 && ngaythangnam == 3 && int.TryParse(txtNam_tot_nghiep.Text,out my1))
+                return true;
+            else
+                return false;
+
         }
     }
 }
