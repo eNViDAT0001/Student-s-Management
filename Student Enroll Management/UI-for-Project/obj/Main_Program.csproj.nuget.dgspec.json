@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Desktop\\bibi\\0. NAM 3\\NHAP MON CONG NGHE PHAN MEM\\clone2\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\Main_Program.csproj": {}
+    "D:\\Git\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\Main_Program.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Desktop\\bibi\\0. NAM 3\\NHAP MON CONG NGHE PHAN MEM\\clone2\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\Main_Program.csproj": {
+    "D:\\Git\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\Main_Program.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\bibi\\0. NAM 3\\NHAP MON CONG NGHE PHAN MEM\\clone2\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\Main_Program.csproj",
+        "projectUniqueName": "D:\\Git\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\Main_Program.csproj",
         "projectName": "Main_Program",
-        "projectPath": "C:\\Users\\ASUS\\Desktop\\bibi\\0. NAM 3\\NHAP MON CONG NGHE PHAN MEM\\clone2\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\Main_Program.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Desktop\\bibi\\0. NAM 3\\NHAP MON CONG NGHE PHAN MEM\\clone2\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\obj\\",
+        "projectPath": "D:\\Git\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\Main_Program.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Git\\Student-s-Management\\Student Enroll Management\\UI-for-Project\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -26,6 +32,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +44,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "EntityFramework": {
               "target": "Package",
@@ -61,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

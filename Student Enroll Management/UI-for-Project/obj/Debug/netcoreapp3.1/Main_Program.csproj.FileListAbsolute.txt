@@ -35,7 +35,6 @@ D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\n
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Scoring.g.cs
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\SubjectButton.g.cs
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\App.g.cs
-D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program_MarkupCompile.cache
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program_MarkupCompile.lref
 D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\CandidateList.baml
@@ -99,3 +98,16 @@ C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s
 C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.csprojAssemblyReference.cache
 C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Statistic.g.cs
 C:\Users\ASUS\Desktop\bibi\0. NAM 3\NHAP MON CONG NGHE PHAN MEM\clone2\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Statistic.baml
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\EntityFramework.dll
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\EditScoring.g.cs
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Statistic.g.cs
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\EditScoring.baml
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Statistic.baml
+D:\Git\Student-s-Management\Student Enroll Management\UI-for-Project\obj\Debug\netcoreapp3.1\Main_Program.csproj.CopyComplete
