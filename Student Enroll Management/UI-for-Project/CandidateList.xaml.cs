@@ -54,6 +54,19 @@ namespace UI_for_Project
             // ĐÃ CHẤM HẾT ĐIỂM CHƯA
             if(confirmEditScoring.confirmAllSubject()== true)
             {
+                // THÊM DỮ LIỆU VÀO BẢNG KET_QUA_TUYEN_SINH KHI ĐÃ CHẤM ĐIỂM XONG 
+                confirmEditScoring.insertKET_QUA_TUYEN_SINH();
+
+                datagridCandidateList.Columns.Add(AddColumn("so_bao_danh", "so_bao_danh", 80));
+                datagridCandidateList.Columns.Add(AddColumn("ma_nganh", "ma_nganh", 130));
+                datagridCandidateList.Columns.Add(AddColumn("tong_diem", "tong_diem", 120));
+                datagridCandidateList.Columns.Add(AddColumn("trung_tuyen", "trung_tuyen", 90));
+
+                string Get_Data = "select * from KET_QUA_TUYEN_SINH";
+                string getTable = "KET_QUA_TUYEN_SINH";
+
+                Upload_Data_fromSql_toDataGrid uploadData_candidatalist = new Upload_Data_fromSql_toDataGrid(Get_Data, datagridCandidateList, getTable);
+                uploadData_candidatalist.setData();
 
             }
             else
@@ -76,20 +89,7 @@ namespace UI_for_Project
                 // CÒN CONFIRM HẾT RỒI THÌ HIỂN THỊ NHƯ NÀY 
                 else
                 {
-                    // THÊM DỮ LIỆU VÀO BẢNG KET_QUA_TUYEN_SINH KHI ĐÃ CHẤM ĐIỂM XONG 
-                    confirmEditScoring.insertKET_QUA_TUYEN_SINH();
-
-                    datagridCandidateList.Columns.Add(AddColumn("so_bao_danh", "so_bao_danh", 80));
-                    datagridCandidateList.Columns.Add(AddColumn("ma_nganh", "ma_nganh", 130));
-                    datagridCandidateList.Columns.Add(AddColumn("tong_diem", "tong_diem", 120));
-                    datagridCandidateList.Columns.Add(AddColumn("trung_tuyen", "trung_tuyen", 90));
-
-                    string Get_Data = "select * from KET_QUA_TUYEN_SINH";
-                    string getTable = "KET_QUA_TUYEN_SINH";
-
-                    Upload_Data_fromSql_toDataGrid uploadData_candidatalist = new Upload_Data_fromSql_toDataGrid(Get_Data, datagridCandidateList, getTable);
-                    uploadData_candidatalist.setData();
-
+                   
                 }
             }
         }

@@ -120,7 +120,7 @@ namespace UI_for_Project.Model
                 else
                     confirm_DAU_ROT = "RỚT";
 
-                string INSERT = string.Format("insert into KET_QUA_TUYEN_SINH values ('{0}','{1}',{2},'{3}')", so_bao_danh, ma_nganh, sum_diem_thi, confirm_DAU_ROT);
+                string INSERT = string.Format("insert into KET_QUA_TUYEN_SINH values ('{0}','{1}',{2},N'{3}')", so_bao_danh, ma_nganh, sum_diem_thi, confirm_DAU_ROT);
 
                 cmd.CommandText = INSERT;
                 cmd.ExecuteNonQuery();

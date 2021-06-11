@@ -89,14 +89,14 @@ namespace UI_for_Project
                 if (MessageBox.Show("Close Application?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
                 {
                     //do no stuff
-                    myData(false);
+                    
                     this.Close();
                 }
                 else
                 {
                     //do yes stuff
                 }
-                MessageBox.Show("       Syntax Error. \n Please re-type again or app will br close.");
+                //MessageBox.Show("       Syntax Error. \n Please re-type again or app will br close.");
             }
         }
     }
