@@ -83,6 +83,7 @@
                      x:Name="txtbHe_dao_tao"
                      Width="200"
                      Height="25" Margin="0,13,100,0"
+                MaxLength="3"
                      ></TextBox>
             <TextBlock
                 
@@ -160,11 +161,13 @@
             Grid.Row="3"
             Grid.Column="1">
 
-            <TextBox 
-                     x:Name="txtMa_truong"
+            <ComboBox
+                     x:Name="cbxMa_truong"
                      Width="200"
-                     Height="25" Margin="0,13,100,0"
-                     ></TextBox>
+                     Height="25" Margin="0,13,100,0" SelectionChanged="cbxMa_truong_SelectionChanged" >
+                <ComboBoxItem >QSC (Trường ĐH CNTT)</ComboBoxItem>
+                <ComboBoxItem >QST (Trường ĐH KHTN)</ComboBoxItem>
+            </ComboBox>
             <TextBlock
                 
                 Width="200"
@@ -223,6 +226,7 @@
                      x:Name="txtNoi_sinh"
                      Width="200"
                      Height="25" Margin="0,13,100,0"
+                MaxLength="50"
                      ></TextBox>
             <TextBlock
                 
@@ -239,6 +243,7 @@
                      x:Name="txtDia_chi_bao_tin"
                      Width="200"
                      Height="25" Margin="0,13,100,0"
+                MaxLength="50"
                      ></TextBox>
             <TextBlock
                 

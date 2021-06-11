@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Text;
@@ -35,7 +36,7 @@ namespace UI_for_Project
         //int nam_tot_nghiep = 0;
         string khu_vuc = "Khu vực 2NT";
         string dang_khi_thi = "CB";
-        //string ma_truong = "";
+        string ma_truong = "";
         int ma_nganh = 7340122;
         //string ngay_sinh = "";
         //string noi_sinh = "";
@@ -83,12 +84,30 @@ namespace UI_for_Project
                 khoi_thi = arr[i].Trim();
         }
 
+        private void cbxMa_truong_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string subject = cbxMa_truong.SelectedItem.ToString();
+            string[] arr = subject.Split(":");
+            for (int i = 0; i < arr.Length; i++)
+                ma_truong = arr[i].Trim();
+            string[] b = ma_truong.Split(' ');
+            ma_truong = b[0];
+        }
+
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            if(Dien_Het_Chua()== false || DUNG_CU_PHAP() == false)
+
+            if (Dien_Het_Chua() == false || DUNG_CU_PHAP() != 0)
             {
-                //MessageBox.Show("Please enter full information. ");
-                var Result = MessageBox.Show("Note", "Please enter full and correct information.", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                string mess = "";
+                if (DUNG_CU_PHAP() == 3)
+                    mess = "Incorrect 'Nam tot nghiep','Ngay sinh'";
+
+                else if (DUNG_CU_PHAP() == 2)
+                    mess = "Incorrect 'Nam tot nghiep'";
+                else
+                    mess = "Incorrect 'Ngay Sinh'";
+                var Result = MessageBox.Show(mess, "Watch out!", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (Result == MessageBoxResult.Yes)
                 {
 
@@ -107,6 +126,7 @@ namespace UI_for_Project
                 INSERT_SQL_GIAY_BAO_THI();
                 INSERT_SQL_BAI_THI();
                 INSERT_SQL_KET_QUA_CHAM_THI();
+                MessageBox.Show("Submited. Please press 'Load from database' to update.");
                 this.Close();
             }
         }
@@ -114,7 +134,7 @@ namespace UI_for_Project
         public void INSERT_SQL_PHIEU_DKDT()
         {
             // PHIEU_DKDT
-            string Query = string.Format("insert into PHIEU_DKDT values ('{0}','{1}', N'{2}', N'{3}', {4},N'{5}', NULL, N'{6}', '{7}', '{8}',CONVERT(smalldatetime,cast('{9}' as date),103), N'{10}', N'{11}')", txtbSo_phieu.Text, khoi_thi, txtbHo_va_ten.Text, khu_vuc.ToString(),int.Parse( txtNam_tot_nghiep.Text), txtbHe_dao_tao.Text, dang_khi_thi, txtMa_truong.Text, ma_nganh, txtNgay_sinh.Text, txtNoi_sinh.Text, txtDia_chi_bao_tin.Text);
+            string Query = string.Format("insert into PHIEU_DKDT values ('{0}','{1}', N'{2}', N'{3}', {4},N'{5}', NULL, N'{6}', '{7}', '{8}',CONVERT(smalldatetime,cast('{9}' as date),103), N'{10}', N'{11}')", txtbSo_phieu.Text, khoi_thi, txtbHo_va_ten.Text, khu_vuc.ToString(),int.Parse( txtNam_tot_nghiep.Text), txtbHe_dao_tao.Text, dang_khi_thi, ma_truong, ma_nganh, txtNgay_sinh.Text, txtNoi_sinh.Text, txtDia_chi_bao_tin.Text);
             Debug.WriteLine(Query);
 
             SqlConnection con = new SqlConnection(sqlConnection.CONNECTION);
@@ -138,6 +158,11 @@ namespace UI_for_Project
         }
         public void INSERT_SQL_GIAY_BAO_THI()
         {
+            // Cho thi tại trường đã đăng kí lun
+            if (ma_truong == "QSC")
+                dia_diem_thi = "Trường ĐH Công Nghệ Thông Tin";
+            else
+                dia_diem_thi = "Trường ĐH Khoa Học Tự Nhiên";
             string Query = string.Format("insert into GIAY_BAO_THI values ('{0}',CONVERT(smalldatetime,cast('{1}' as date)), N'{2}', 'C101', 30000.0000)", so_bao_danh, txtNgay_sinh.Text,dia_diem_thi.ToString());
 
             SqlConnection con = new SqlConnection(sqlConnection.CONNECTION);
@@ -196,16 +221,16 @@ namespace UI_for_Project
 
         public bool Dien_Het_Chua()
         {
-            if (txtNgay_sinh.Text == ""   || txtbHo_va_ten.Text == ""|| txtNoi_sinh.Text=="" || txtDia_chi_bao_tin.Text==""|| int.Parse(txtNam_tot_nghiep.Text)==0)
+            if (txtNgay_sinh.Text == ""   || txtbHo_va_ten.Text == ""|| txtNoi_sinh.Text=="" || txtDia_chi_bao_tin.Text=="" || txtNam_tot_nghiep.Text=="")
             {
                 return false;
             }
             else
                 return true;
         }
-        public bool DUNG_CU_PHAP()
+        public int DUNG_CU_PHAP()
         {
-          
+
             int daugach = 0;
             int ngaythangnam = 0;
             
@@ -224,11 +249,17 @@ namespace UI_for_Project
                     ngaythangnam++;
             }
             int my1;
-            if (daugach == 2 && ngaythangnam == 3 && int.TryParse(txtNam_tot_nghiep.Text,out my1))
-                return true;
+            if (daugach == 2 && ngaythangnam == 3 && int.TryParse(txtNam_tot_nghiep.Text, out my1))
+                return 0;
+            else if (daugach != 2 || ngaythangnam != 3)
+                return 1;
+            else if (int.TryParse(txtNam_tot_nghiep.Text, out my1) == false)
+                return 2;
             else
-                return false;
+                return 3;
+
 
         }
+
     }
 }

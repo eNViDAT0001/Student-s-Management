@@ -80,7 +80,7 @@ namespace UI_for_Project
                     datagridCandidateList.Columns.Add(AddColumn("so_phong_thi", "so_phong_thi", 90));
                     datagridCandidateList.Columns.Add(AddColumn("dia_diem_thi", "dia_diem_thi", 200));
 
-                    string Get_Data = "select THI_SINH.so_bao_danh,ho_ten, ngay_thi,so_phong_thi,dia_diem_thi from THI_SINH, GIAY_BAO_THI";
+                    string Get_Data = "select THI_SINH.so_bao_danh,ho_ten, ngay_thi,so_phong_thi,dia_diem_thi from THI_SINH, GIAY_BAO_THI where THI_SINH.so_bao_danh= GIAY_BAO_THI.so_bao_danh";
                     string getTable = "THI_SINH,GIAY_BAO_THI";
 
                     Upload_Data_fromSql_toDataGrid uploadData_candidatalist = new Upload_Data_fromSql_toDataGrid(Get_Data, datagridCandidateList, getTable);
