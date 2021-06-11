@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Text;
+using System.Windows;
 
 namespace UI_for_Project.Model
 {
@@ -27,11 +28,16 @@ namespace UI_for_Project.Model
         // TẠO SỐ PHIẾU MỚI BẰNG CÁCH LÁY SỐ PHIẾU CUỐI CỘNG CHO 1
         public static string getNumber_Last_SoPhieu()
         {
+            
             string a = "";
             string Query = "select * from PHIEU_DKDT";
             string nameTable = "THI_SINH";
 
+            //Xet empty
+            if (confirmTableIsEmpty.getBool(nameTable))
+                return "DK20210001";
             DataTable dt = sqlDataTable.getDataTable(Query, nameTable);
+            
 
             foreach (DataRow row in dt.Rows)
             {
@@ -53,6 +59,10 @@ namespace UI_for_Project.Model
             string Query = "select * from THI_SINH";
             string nameTable = "THI_SINH";
 
+            //Xet empty
+            if (confirmTableIsEmpty.getBool(nameTable))
+                return "20520001";
+
             DataTable dt = sqlDataTable.getDataTable(Query, nameTable);
 
             foreach (DataRow row in dt.Rows)
@@ -66,6 +76,10 @@ namespace UI_for_Project.Model
             int a = 0;
             string Query = "select * from BAI_THI";
             string nameTable = "BAI_THI";
+
+            //Xet empty
+            if (confirmTableIsEmpty.getBool(nameTable))
+                return 1001 ;
 
             DataTable dt = sqlDataTable.getDataTable(Query, nameTable);
 

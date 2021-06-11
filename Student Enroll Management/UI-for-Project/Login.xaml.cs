@@ -86,15 +86,16 @@ namespace UI_for_Project
             }
             else if (confirmLogin.confirm_Login() == "none")
             {
-                if (MessageBox.Show("Close Application?", "Question", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                if (MessageBox.Show("Syntax Error.\nPlease retype.", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
                 {
                     //do no stuff
                     
-                    this.Close();
+                   
                 }
                 else
                 {
                     //do yes stuff
+                    this.Close();
                 }
                 //MessageBox.Show("       Syntax Error. \n Please re-type again or app will br close.");
             }
