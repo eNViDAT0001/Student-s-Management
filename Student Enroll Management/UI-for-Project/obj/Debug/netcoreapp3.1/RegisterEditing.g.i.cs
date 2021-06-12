@@ -165,7 +165,7 @@ namespace UI_for_Project {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Main_Program;V1.0.0.0;component/registerediting.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Main_Program;component/registerediting.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\RegisterEditing.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

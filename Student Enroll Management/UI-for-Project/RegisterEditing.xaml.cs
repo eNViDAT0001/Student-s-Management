@@ -163,7 +163,7 @@ namespace UI_for_Project
                 dia_diem_thi = "Trường ĐH Công Nghệ Thông Tin";
             else
                 dia_diem_thi = "Trường ĐH Khoa Học Tự Nhiên";
-            string Query = string.Format("insert into GIAY_BAO_THI values ('{0}',CONVERT(smalldatetime,cast('{1}' as date)), N'{2}', 'C101', 30000.0000)", so_bao_danh, txtNgay_sinh.Text,dia_diem_thi.ToString());
+            string Query = string.Format("insert into GIAY_BAO_THI values ('{0}',CONVERT(smalldatetime,cast('6/27/21' as date)), N'{1}', 'C101', 30000.0000)", so_bao_danh,dia_diem_thi.ToString());
 
             SqlConnection con = new SqlConnection(sqlConnection.CONNECTION);
             con.Open();
