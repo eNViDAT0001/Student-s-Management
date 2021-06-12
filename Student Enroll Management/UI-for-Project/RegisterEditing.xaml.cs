@@ -96,7 +96,6 @@ namespace UI_for_Project
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-
             if (Dien_Het_Chua() == false || DUNG_CU_PHAP() != 0)
             {
                 string mess = "";
@@ -261,5 +260,26 @@ namespace UI_for_Project
 
         }
 
+        private void btnCalender_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (calender.Visibility == Visibility.Visible)
+                calender.Visibility = Visibility.Hidden;
+            else
+            {
+                calender.Visibility = Visibility.Visible;
+
+            }
+
+
+        }
+
+        private void calender_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+             
+            string[] a = calender.SelectedDate.ToString().Split(' ');
+            txtNgay_sinh.Text = a[0];
+            calender.Visibility = Visibility.Hidden;
+        }
     }
 }

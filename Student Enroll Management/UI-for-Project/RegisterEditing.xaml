@@ -26,7 +26,7 @@
         <Grid
             Grid.Row="2"
             Grid.Column="0">
-            
+
             <TextBox Width="200"
                      Height="25" Margin="0,13,100,0"
                        x:Name="txtbSo_phieu"
@@ -156,7 +156,7 @@
                 <ComboBoxItem >KCB</ComboBoxItem>
             </ComboBox>
         </Grid>
-        
+
         <Grid
             Grid.Row="3"
             Grid.Column="1">
@@ -205,11 +205,13 @@
             Grid.Row="5"
             Grid.Column="1">
 
-            <TextBox 
+            <TextBox IsReadOnly="True"
                      x:Name="txtNgay_sinh"
                      Width="200"
                      Height="25" Margin="0,13,100,0"
                      ></TextBox>
+            <Button Content="..." Name="btnCalender"
+                    Width="25" Height="25" Margin="205,10,65,-2" Click="btnCalender_Click" ></Button>
             <TextBlock
                 
                 Width="200"
@@ -265,5 +267,9 @@
                 Foreground="#f1faee"
                 Content="CANCEL"
                 FontSize="25" Height="38" VerticalAlignment="Top" Click="btnCancel_Click"/>
+        <Calendar Visibility="Hidden" x:Name="calender"
+                  SelectionMode="SingleDate"
+            Width="200" Height="180" Grid.Column="1" Margin="90,19,10,31" Grid.RowSpan="6" SelectedDatesChanged="calender_SelectedDatesChanged"/>
     </Grid>
+
 </Window>
