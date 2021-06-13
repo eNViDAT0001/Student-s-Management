@@ -35,7 +35,7 @@ namespace UI_for_Project
         //string he_dao_tao = "";
         //int nam_tot_nghiep = 0;
         string khu_vuc = "Khu vực 2NT";
-        string dang_khi_thi = "CB";
+        string dang_khi_thi = "";
         string ma_truong = "";
         int ma_nganh = 7340122;
         //string ngay_sinh = "";
@@ -98,22 +98,27 @@ namespace UI_for_Project
         {
             if (Dien_Het_Chua() == false || DUNG_CU_PHAP() != 0)
             {
-                string mess = "";
-                if (DUNG_CU_PHAP() == 3)
-                    mess = "Incorrect 'Nam tot nghiep','Ngay sinh'";
-
-                else if (DUNG_CU_PHAP() == 2)
-                    mess = "Incorrect 'Nam tot nghiep'";
+                if (Dien_Het_Chua() == false)
+                    MessageBox.Show("You need to fill in all the information");
                 else
-                    mess = "Incorrect 'Ngay Sinh'";
-                var Result = MessageBox.Show(mess, "Watch out!", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                if (Result == MessageBoxResult.Yes)
                 {
+                    string mess = "";
+                    if (DUNG_CU_PHAP() == 3)
+                        mess = "Incorrect 'Nam tot nghiep','Ngay sinh'";
 
-                }
-                else if (Result == MessageBoxResult.No)
-                {
-                    this.Close();
+                    else if (DUNG_CU_PHAP() == 2)
+                        mess = "Incorrect 'Nam tot nghiep'";
+                    else
+                        mess = "Incorrect 'Ngay Sinh'";
+                    var Result = MessageBox.Show(mess, "Watch out!", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (Result == MessageBoxResult.Yes)
+                    {
+
+                    }
+                    else if (Result == MessageBoxResult.No)
+                    {
+                        this.Close();
+                    }
                 }
             }
             else
@@ -220,7 +225,7 @@ namespace UI_for_Project
 
         public bool Dien_Het_Chua()
         {
-            if (txtNgay_sinh.Text == ""   || txtbHo_va_ten.Text == ""|| txtNoi_sinh.Text=="" || txtDia_chi_bao_tin.Text=="" || txtNam_tot_nghiep.Text=="")
+            if (txtNgay_sinh.Text == ""   || txtbHo_va_ten.Text == ""|| txtNoi_sinh.Text=="" || txtDia_chi_bao_tin.Text=="" || txtNam_tot_nghiep.Text=="" || ma_truong=="" || khoi_thi==""||dang_khi_thi=="")
             {
                 return false;
             }

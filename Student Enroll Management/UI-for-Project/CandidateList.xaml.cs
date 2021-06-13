@@ -54,8 +54,10 @@ namespace UI_for_Project
             // ĐÃ CHẤM HẾT ĐIỂM CHƯA
             if(confirmEditScoring.confirmAllSubject()== true)
             {
-                // THÊM DỮ LIỆU VÀO BẢNG KET_QUA_TUYEN_SINH KHI ĐÃ CHẤM ĐIỂM XONG 
-                confirmEditScoring.insertKET_QUA_TUYEN_SINH();
+                // THÊM DỮ LIỆU VÀO BẢNG KET_QUA_TUYEN_SINH KHI ĐÃ CHẤM ĐIỂM XONG -- Nếu bảng rỗng, nếu bảng k rỗng tức là có data rồi thì k thêm
+                // Xét bảng có rỗng k 
+                if(confirmTableIsEmpty.getBool("KET_QUA_TUYEN_SINH"))
+                    confirmEditScoring.insertKET_QUA_TUYEN_SINH();
 
                 datagridCandidateList.Columns.Add(AddColumn("so_bao_danh", "so_bao_danh", 80));
                 datagridCandidateList.Columns.Add(AddColumn("ma_nganh", "ma_nganh", 130));
