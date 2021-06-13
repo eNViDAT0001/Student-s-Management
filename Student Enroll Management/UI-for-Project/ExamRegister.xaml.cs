@@ -177,35 +177,40 @@ namespace UI_for_Project
 
         private void btnFinishRegister_Click(object sender, RoutedEventArgs e)
         {
-            if (confirmPerson.getPersonPermission() == "ADMIN")
+            var finish = MessageBox.Show("Note", "Do you want to finish?", MessageBoxButton.YesNo);
+            if(finish == MessageBoxResult.Yes)
             {
-                SqlConnection con = new SqlConnection(sqlConnection.CONNECTION);
-                //con.ConnectionString = ConfigurationManager.ConnectionStrings[@"Data Source=PCHIEU\SQLEXPRESS;Initial Catalog=QLTuyenSinh;Integrated Security=True"].ConnectionString;
-                con.Open();
 
-                SqlCommand cmd = con.CreateCommand();
-                
-                string update = "update CONFIRM_REGISTER set confirm = 'true'";
-                cmd.CommandText = update;
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("FINISH REGISTER.");
-
-                var main = new MainWindow();
-                main.Show();
-                this.Close();
-            }
-            else
-            {
-                var Result = MessageBox.Show("Note", "You need ADMIN permission.Do you want to log out?", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                if (Result == MessageBoxResult.Yes)
+                if (confirmPerson.getPersonPermission() == "ADMIN")
                 {
-                    var login = new Login();
-                    login.Show();
+                    SqlConnection con = new SqlConnection(sqlConnection.CONNECTION);
+                    //con.ConnectionString = ConfigurationManager.ConnectionStrings[@"Data Source=PCHIEU\SQLEXPRESS;Initial Catalog=QLTuyenSinh;Integrated Security=True"].ConnectionString;
+                    con.Open();
+
+                    SqlCommand cmd = con.CreateCommand();
+
+                    string update = "update CONFIRM_REGISTER set confirm = 'true'";
+                    cmd.CommandText = update;
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("FINISH REGISTER.");
+
+                    var main = new MainWindow();
+                    main.Show();
                     this.Close();
                 }
-                else if (Result == MessageBoxResult.No)
+                else
                 {
-                    
+                    var Result = MessageBox.Show("Note", "You need ADMIN permission.Do you want to log out?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (Result == MessageBoxResult.Yes)
+                    {
+                        var login = new Login();
+                        login.Show();
+                        this.Close();
+                    }
+                    else if (Result == MessageBoxResult.No)
+                    {
+
+                    }
                 }
             }
         }
