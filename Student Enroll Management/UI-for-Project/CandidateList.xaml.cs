@@ -20,6 +20,8 @@ using System.Diagnostics;
 using Microsoft.Win32;
 using UI_for_Project.Model;
 
+
+
 namespace UI_for_Project
 {
     /// <summary>
@@ -162,10 +164,125 @@ namespace UI_for_Project
         }
 
         private void BtnPrint_Click(object sender, RoutedEventArgs e)
-        {
-            //ExportToExcelAndCsv();
-
+        { 
             datagridCandidateList.ExportToExcel(this.ToString());
+            
+        }
+
+        private void btnInGiayBao_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (confirmEditScoring.confirmAllSubject() == false)
+            {
+                inPhieuBaoThi();
+            }
+            else
+            {
+                inPhieuBaoDiem();
+            }                
+        }
+
+        private void inPhieuBaoDiem()
+        {
+            DataRowView drv = datagridCandidateList.SelectedItem as DataRowView;
+            if (drv != null)
+            {
+                DataView dataView = datagridCandidateList.ItemsSource as DataView;
+
+                if (MessageBox.Show("Xuất Dữ liệu", "Thông Báo", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+                {
+                    string _hoTen, _ngaySinh, _diaChiBaoTin, _noiSinh;
+
+                    string sbd = drv["so_bao_danh"].ToString();
+                    string tongDiem = drv["tong_diem"].ToString();
+                    string trungTuyen = drv["trung_tuyen"].ToString();
+
+                    string Query = "select * from THI_SINH where so_bao_danh=" + sbd;
+                    string nameTable = "THI_SINH";
+                    DataTable dt = sqlDataTable.getDataTable(Query, nameTable);
+                    DataRow data = dt.Rows[0];
+                    _hoTen = data["ho_ten"].ToString();
+                    _ngaySinh = data["ngay_sinh"].ToString().Split(' ')[0];
+                    _diaChiBaoTin = data["dia_chi_bao_tin"].ToString();
+                    _noiSinh = data["noi_sinh"].ToString();
+
+
+                    string Query1 = "select * from KET_QUA_CHAM_THI where so_bao_danh=" + sbd;
+                    string nameTable1 = "KET_QUA_CHAM_THI";
+                    DataTable dt1 = sqlDataTable.getDataTable(Query1, nameTable1);
+
+                    /*string[] arrDiem = new string[3];
+                    // int i = 0;
+                    for (int i = 0; i < arrDiem.Length; i++)
+                    {
+                        foreach (DataRow row in dt1.Rows)
+                        {
+                            arrDiem[i] = row["mon"].ToString();
+
+                        }
+                    }*/
+                   DataRow data1 = dt1.Rows[0];
+                    string diemMon1 = data1["diem_thi"].ToString();
+                    DataRow data2 = dt1.Rows[1];
+                    string diemMon2 = data2["diem_thi"].ToString();
+                    DataRow data3 = dt1.Rows[2];
+                    string diemMon3 = data3["diem_thi"].ToString();
+
+                    PhieuBaoDiem phieuBaoDiem = new PhieuBaoDiem(_hoTen, _ngaySinh, _diaChiBaoTin, _noiSinh, sbd, diemMon1, diemMon2, diemMon3, tongDiem, trungTuyen);
+                    phieuBaoDiem.Show();
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thí sinh", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+        }
+        
+                
+        private void inPhieuBaoThi()
+        {
+            DataRowView drv = datagridCandidateList.SelectedItem as DataRowView;
+            if (drv != null)
+            {
+                DataView dataView = datagridCandidateList.ItemsSource as DataView;
+
+
+                if (MessageBox.Show("Xuất Dữ liệu", "Thông Báo", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+                {
+                    string _ngaySinh, _diaChiBaoTin, _noiSinh, _lePhiThi;
+
+                    string sbd = drv["so_bao_danh"].ToString();
+                    string hoTen = drv["ho_ten"].ToString();
+                    string ngayThi = drv["ngay_thi"].ToString().Split(' ')[0];
+                    string soPhongThi = drv["so_phong_thi"].ToString();
+                    string diaDiemThi = drv["dia_diem_thi"].ToString();
+
+                    string Query = "select * from THI_SINH where so_bao_danh=" + sbd;
+                    string nameTable = "THI_SINH";
+
+                    DataTable dt = sqlDataTable.getDataTable(Query, nameTable);
+
+
+                    DataRow data = dt.Rows[0];
+                    _ngaySinh = data["ngay_sinh"].ToString().Split(' ')[0];
+                    _diaChiBaoTin = data["dia_chi_bao_tin"].ToString();
+                    _noiSinh = data["noi_sinh"].ToString();
+
+                    //CẦN LẤY TỪ DATABASE
+                    _lePhiThi = "30000";
+
+
+                    PhieuBaoThi phieuBaoThi = new PhieuBaoThi(hoTen, _ngaySinh, _diaChiBaoTin, diaDiemThi, ngayThi, _noiSinh, sbd, soPhongThi, _lePhiThi);
+                    phieuBaoThi.Show();
+
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn thí sinh", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
         }
     }
 }
