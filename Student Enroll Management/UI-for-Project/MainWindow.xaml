@@ -11,8 +11,8 @@
         <!--
         Styling all the buttons-->
         <Style x:Key="FunctionBtn_Idle" TargetType="Button">
-            
-            
+
+
             <Setter Property="Control.Foreground" Value="#09BC8A"/>
             <Setter Property="Background" Value="#09BC8A"/>
             <Setter Property="Control.Width" Value="200"/>
@@ -99,7 +99,7 @@
 
     </Window.Resources>
     <Grid Background="#C4C4C4">
-        
+
         <Grid x:Name="grid_SelectButton"
               Width="205"
               HorizontalAlignment="Left"
@@ -136,14 +136,26 @@
 
             </Grid>
 
-            <Button 
+            <Grid VerticalAlignment="Bottom" Height="100">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button 
                 x:Name="btnLogOut"
+                Grid.Row="1"
                 Click="LogOut"
-                Style="{StaticResource LogOut}" VerticalAlignment="Bottom"
-                Content="LOG OUT"
-                    >
-                
-            </Button>
+                Style="{StaticResource LogOut}"  VerticalAlignment="Bottom"
+                Content="LOG OUT">
+                </Button>
+            <Button 
+                x:Name="btnResetRegisterPhase"
+                Grid.Row="0"
+                Click="ResetRegisterPhase"
+                Style="{StaticResource FunctionBtn_Idle}" VerticalAlignment="Bottom"
+                Content="Reset Register phase"
+                    />
+            </Grid>
 
         </Grid>
 
@@ -152,7 +164,7 @@
             Background="White"
             x:Name="Holder"
             Width="580" Height="400" Margin="210,17,10,17">
-            
+
         </Frame>
     </Grid>
 </Window>

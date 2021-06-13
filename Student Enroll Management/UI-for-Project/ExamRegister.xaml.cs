@@ -90,7 +90,7 @@ namespace UI_for_Project
             da.UpdateCommand = builder.GetUpdateCommand();
             da.Update(dt);
             
-            MessageBox.Show("Update.");
+            MessageBox.Show("Update!");
         }
         public void loadSQL()
         {
@@ -215,6 +215,5 @@ namespace UI_for_Project
             }
         }
 
-       
     }
 }

@@ -42,6 +42,51 @@ namespace UI_for_Project
             this.Close();
 
         }
+
+        private void ResetRegisterPhase(object sender, RoutedEventArgs e)
+        {
+            var finish = MessageBox.Show("Do you want to reset Register phase?", "Alert", MessageBoxButton.YesNo);
+            if (finish == MessageBoxResult.Yes)
+            {
+
+                if (confirmPerson.getPersonPermission() == "ADMIN")
+                {
+                    SqlConnection con = new SqlConnection(sqlConnection.CONNECTION);
+                    //con.ConnectionString = ConfigurationManager.ConnectionStrings[@"Data Source=PCHIEU\SQLEXPRESS;Initial Catalog=QLTuyenSinh;Integrated Security=True"].ConnectionString;
+                    con.Open();
+
+                    SqlCommand cmd = con.CreateCommand();
+
+                    string update = "update CONFIRM_REGISTER set confirm = 'false'";
+                    cmd.CommandText = update;
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("REGISTER PHASE HAS BEEN RESET.");
+
+                    var register = new ExamRegister();
+                    register.Show();
+                    this.Close();
+                }
+                else
+                {
+                    var Result = MessageBox.Show("You need ADMIN permission\n Do you want to log out?", "Message", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                    if (Result == MessageBoxResult.Yes)
+                    {
+                        // click button log_out
+                        confirmPerson.setPersonPermission("NONE");
+
+                        var login = new Login();
+                        login.Show();
+                        this.Close();
+                    }
+                    else if (Result == MessageBoxResult.No)
+                    {
+
+                    }
+                }
+            }
+
+        }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //this.Show();
