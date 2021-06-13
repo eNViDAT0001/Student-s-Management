@@ -18,6 +18,12 @@
     <Compile Update="Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="PhieuBaoDiem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PhieuBaoThi.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="RegisterEditing.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -45,6 +51,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PhieuBaoDiem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PhieuBaoThi.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RegisterEditing.xaml">
