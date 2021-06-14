@@ -4,8 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UI_for_Project"
+        ResizeMode="NoResize"
         mc:Ignorable="d"
-        Title="ExamRegister" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="ExamRegister" Height="542" Width="910" Loaded="Window_Loaded">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#d62828"/>
@@ -13,9 +14,9 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Button x:Name="btnLoad" Width="100" Height="50" HorizontalAlignment="Left" Margin="0,254,0,130" FontSize="10" Click="btnLoad_Click"> Load From Database</Button>
-        <Button x:Name="btnSave" Width="100" Height="50" HorizontalAlignment="Left" Click="btnSave_Click"> Save To Database</Button>
-        <TextBlock FontFamily="Roboto" FontSize="30" Margin="0,0,0,396"> REGISTERING INFORMATION</TextBlock>
+        <Button x:Name="btnLoad" Width="100" Height="50" HorizontalAlignment="Left" Margin="355,40,0,436" FontSize="10" Click="btnLoad_Click">Load From Database</Button>
+        <Button x:Name="btnSave" Width="100" Height="50" HorizontalAlignment="Left" Click="btnSave_Click" Margin="497,40,0,436">Save To Database</Button>
+        <TextBlock FontFamily="Roboto" FontSize="30" Margin="0,0,0,491"> REGISTERING INFORMATION</TextBlock>
 
         <DataGrid x:Name="dataGrid"
                   AutoGenerateColumns="False"
@@ -37,7 +38,7 @@
                 <DataGridTextColumn Binding="{Binding noi_sinh }" Header="Nơi sinh" Width="120"/>
                 <DataGridTextColumn Binding="{Binding dia_chi_bao_tin }" Header="Địa chỉ báo tin" Width="120"/>
             </DataGrid.Columns>
-            
+
         </DataGrid>
 
         <Button x:Name="btnRemove"
@@ -60,9 +61,9 @@
                 Width="150"
                 Height="50"
                 Background="#1d3557"
-                Foreground="#f1faee" Margin="550,372,100,12" Click="btnFinishRegister_Click"> FINISH REGISTERING
-                
+                Foreground="#f1faee" Margin="550,372,100,12" Click="btnFinishRegister_Click">FINISH REGISTERING
+
         </Button>
-        
+
     </Grid>
 </Window>
