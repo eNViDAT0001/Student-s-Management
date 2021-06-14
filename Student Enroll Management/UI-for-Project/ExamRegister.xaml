@@ -13,14 +13,10 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <Button x:Name="btnLoad" Width="100" Height="50" HorizontalAlignment="Left" Margin="0,254,0,130" FontSize="10" Click="btnLoad_Click"> Load From Database</Button>
-        <Button x:Name="btnSave" Width="100" Height="50" HorizontalAlignment="Left" Click="btnSave_Click"> Save To Database</Button>
-        <TextBlock FontFamily="Roboto" FontSize="30" Margin="0,0,0,396"> REGISTERING INFORMATION</TextBlock>
 
         <DataGrid x:Name="dataGrid"
                   AutoGenerateColumns="False"
                   
-                  Width="600" Height="300" HorizontalAlignment="Center" VerticalAlignment="Center" RowEditEnding="dataGrid_RowEditEnding"
                  >
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding so_phieu }" Header="Số phiếu(*)" Width="80" IsReadOnly="True"/>
@@ -37,32 +33,22 @@
                 <DataGridTextColumn Binding="{Binding noi_sinh }" Header="Nơi sinh" Width="120"/>
                 <DataGridTextColumn Binding="{Binding dia_chi_bao_tin }" Header="Địa chỉ báo tin" Width="120"/>
             </DataGrid.Columns>
-            
         </DataGrid>
 
         <Button x:Name="btnRemove"
                 Width="100"
-                Height="50" Margin="100,374,600,10"
                 FontSize="20"
-                FontFamily="Roboto" Click="btnRemove_Click">REMOVE</Button>
         <Button x:Name="btnAdd"
                 Width="100"
-                Height="50" Margin="214,374,486,10"
                 FontSize="20"
-                FontFamily="Roboto" Click="btnAdd_Click">ADD</Button>
         <Button x:Name="btnEdit"
                 Width="100"
-                Height="50" Margin="330,374,370,10"
                 FontSize="20"
-                FontFamily="Roboto" Click="btnEdit_Click">EDIT</Button>
 
         <Button x:Name="btnFinishRegister"
                 Width="150"
                 Height="50"
                 Background="#1d3557"
-                Foreground="#f1faee" Margin="550,372,100,12" Click="btnFinishRegister_Click"> FINISH REGISTERING
-                
         </Button>
-        
     </Grid>
 </Window>
