@@ -6,8 +6,6 @@
         xmlns:local="clr-namespace:UI_for_Project"
         mc:Ignorable="d"
         Title="Student Enroll Management" Height="450" Width="800" Loaded="Window_Loaded"
-        Background="White"
-        ResizeMode="NoResize"
         >
     <Window.Resources>
         <!--
@@ -138,20 +136,35 @@
 
             </Grid>
 
-            <Button 
+            <Grid VerticalAlignment="Bottom" Height="100">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button 
                 x:Name="btnLogOut"
+                Grid.Row="1"
                 Click="LogOut"
-                Style="{StaticResource LogOut}" VerticalAlignment="Bottom"
-                Content="LOG OUT"
-                    >
-
-            </Button>
+                Style="{StaticResource LogOut}"  VerticalAlignment="Bottom"
+                Content="LOG OUT">
+                </Button>
+            <Button 
+                x:Name="btnResetRegisterPhase"
+                Grid.Row="0"
+                Click="ResetRegisterPhase"
+                Style="{StaticResource FunctionBtn_Idle}" VerticalAlignment="Bottom"
+                Content="Reset Register phase"
+                    />
+            </Grid>
 
         </Grid>
 
         <Frame
             NavigationUIVisibility="Hidden"
             Background="White"
-            x:Name="Holder" Margin="210,0,0,0"/>
+            x:Name="Holder"
+            Width="580" Height="400" Margin="210,17,10,17">
+
+        </Frame>
     </Grid>
 </Window>
