@@ -1,0 +1,67 @@
+remove Arrange Room button,THIS FOLLOWING UPDATE MUST BE COMPLETED:
+- initialize SQL database with only PHIEU_DKDT datatable filled
+- Add new EXAM_DATE table with ONLY ONE FIELD ngay_thi
+- remove table BAI_THI
+- add new bool value da_cham_diem in KET_QUA_THI
+- add new file ma_nganh in THI_SINH 
+- add new field khoi_thi in THI_SINH 
+- Add new table PHONG_THI, with these fields :
++ ma_phong_thi
++ so_phong_thi
++ dia_diem_thi
+- so_phong_thi and dia_diem_thi in GIAY_BAO_THI, now replace by ma_phong_thi, with has foreign key with PHONG_THI
+- now ARRANGE ROOM feature will be a function invoked when click "FINISH REGISTERING" button, which
+will do the following :
+* DATA BELOW WILL BE ADDED INTO THI_SINH :
++ PROVIDE ID for each student in PHIEU_DKDT
++ Provide ROOM based on the new database PHONG_THI
++ Provide ngay_sinh based on data PHIEU_DKDT
++ Provide noi_sinh based on data PHIEU_DKDT
++ Provide dia_chi_bao_tin based on data PHIEU_DKDT
+* DATA BELOW WILL BE ADDED INTO GIAY_BAO_THI :
++ reference with PRIMARY KEY so_bao_danh in THI_SINH : so_bao_danh
++ reference with value ngay_thi in EXAM_DATE table : ngay_thi
++ Provide ma_phong_thi use data in PHONG_THI
++ le_phi_thi is always 30.000
+*DATA BELOW WILL BE ADDED INTO KET_QUA_THI
+- Loop though THI_SINH 
++ if KHOI_THI == A00 do following :
+		> int randnum = 4 digit_number_random
+		> int diem thi = 0
+		> int so_bao_danh = THI_SINH.so_bao_danh
+		> int ma_mon = 1 (toan)
+		> bool da_cham_diem = false
+		
+		> int randnum = 4 digit_number_random
+		> int diem thi = 0
+		> int so_bao_danh = THI_SINH.so_bao_danh
+		> int ma_mon = 2 (ly)
+		> bool da_cham_diem = false
+		
+		> int randnum = 4 digit_number_random
+		> int diem thi = 0
+		> int so_bao_danh = THI_SINH.so_bao_danh
+		> int ma_mon = 3 (hoa)
+		> bool da_cham_diem = false
++ and then do alike with the rest KHOI_THI
+
+AFTER FINISH SCORING
+
+Count the score need to be pass :
+loop through ma_nganh 
+select all so_bao_danh where ma_nganh = @ma_nganh
+create array ls_tong_diem
+float tongdiem = 0
+every so_bao_danh loop though so_phach where so_bao_danh = @so_bao_danh 
+get diem from that so_phach
+tongdiem+= diem
+
+ls_tong_diem.add(tong_diem);
+sort ls_tong_diem;
+diem_chuan = ls_tong_diem[19];
+
+Add data in KET_QUA_TUYEN_SINH
+so_bao_danh = thisinh.so_bao_danh
+ma_nganh = thisinh.ma_nganh
+tong_diem = sum( select diem in ket_qua_thi where so_bao_danh= @so_bao_danh)
+trung_tuyen = @tong_diem >= DIEM_CHUAN.ma_nganh.diem_chuan 
