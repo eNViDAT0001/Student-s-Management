@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -86,18 +86,7 @@ namespace UI_for_Project
             }
             else if (confirmLogin.confirm_Login() == "none")
             {
-                if (MessageBox.Show("Syntax Error.\nPlease retype.", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
-                {
-                    //do no stuff
-                    
-                   
-                }
-                else
-                {
-                    //do yes stuff
-                    this.Close();
-                }
-                //MessageBox.Show("       Syntax Error. \n Please re-type again or app will br close.");
+                MessageBox.Show("Authentication failed", "Login");
             }
         }
     }
