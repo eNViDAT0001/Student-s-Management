@@ -31,6 +31,17 @@ namespace UI_for_Project
             InitializeComponent();
             // GIAO DIỆN STATISTIC CHỈ HIỂN THỊ KHI HOÀN THÀNH CHẤM ĐIỂM
             // NẾU CHƯA HOÀN THÀNH THÌ KHI CLICK VÀO SẼ RA THÔNG BÁO VÀ CHUYỂN VỀ GIAO DIỆN CANDIDATE
+            btnCandidate.Style = SelectingStyle();
+
+            if (!(Holder.Content is CandidateList))
+            {
+                Holder.Content = null;
+                while (Holder.NavigationService.RemoveBackEntry() != null) ;
+                Holder.Content = new CandidateList();
+            }
+
+            btnScoring.Style = IdlingStyle();
+            btnStatistic.Style = IdlingStyle();
         }
         private void LogOut(object sender, RoutedEventArgs e)
         {

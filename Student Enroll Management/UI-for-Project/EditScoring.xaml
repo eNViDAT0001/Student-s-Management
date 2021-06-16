@@ -45,7 +45,7 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding so_phach }" Header="so_phach" Width="80" IsReadOnly="True"/>
                     <DataGridTextColumn Binding="{Binding diem_thi }" Header="diem_thi" Width="130"/>
-                    <DataGridTextColumn Binding="{Binding ma_mon }" Header="ma_mon" Width="130"/>
+                    <DataGridTextColumn Binding="{Binding ma_mon }" Header="ma_mon" Width="130" IsReadOnly="True"/>
                    
 
                     
