@@ -144,6 +144,7 @@ namespace UI_for_Project
                     {
                         confirmEditScoring.confirmSubject(convertSub(subName), true);
                     }
+
                 }
                 else
                 {

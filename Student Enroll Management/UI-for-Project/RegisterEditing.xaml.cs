@@ -103,13 +103,8 @@ namespace UI_for_Project
                 else
                 {
                     string mess = "";
-                    if (DUNG_CU_PHAP() == 3)
-                        mess = "Incorrect 'Nam tot nghiep','Ngay sinh'";
-
-                    else if (DUNG_CU_PHAP() == 2)
+                    if (DUNG_CU_PHAP() == 2)
                         mess = "Incorrect 'Nam tot nghiep'";
-                    else
-                        mess = "Incorrect 'Ngay Sinh'";
                     var Result = MessageBox.Show(mess, "Watch out!", MessageBoxButton.YesNo, MessageBoxImage.Question);
                     if (Result == MessageBoxResult.Yes)
                     {
@@ -234,35 +229,11 @@ namespace UI_for_Project
         }
         public int DUNG_CU_PHAP()
         {
-
-            int daugach = 0;
-            int ngaythangnam = 0;
-            
-            string ngaysinh = txtNgay_sinh.Text.ToString();
-            for(int i = 0; i < ngaysinh.Length; i++)
-            {
-                if (ngaysinh[i].ToString().Equals("/"))
-                    daugach++;
-            }
-
-            string [] arr= ngaysinh.Split(new[] { '/' });
-            for (int i = 0; i < arr.Length; i++)
-            {
-                int my;
-                if (int.TryParse(arr[i], out my))
-                    ngaythangnam++;
-            }
             int my1;
-            if (daugach == 2 && ngaythangnam == 3 && int.TryParse(txtNam_tot_nghiep.Text, out my1))
-                return 0;
-            else if (daugach != 2 || ngaythangnam != 3)
-                return 1;
-            else if (int.TryParse(txtNam_tot_nghiep.Text, out my1) == false)
+            if (int.TryParse(txtNam_tot_nghiep.Text, out my1) == false)
                 return 2;
-            else
-                return 3;
-
-
+            return 0;
+            
         }
 
         private void btnCalender_Click(object sender, RoutedEventArgs e)
@@ -281,7 +252,6 @@ namespace UI_for_Project
 
         private void calender_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
-             
             string[] a = calender.SelectedDate.ToString().Split(' ');
             txtNgay_sinh.Text = a[0];
             calender.Visibility = Visibility.Hidden;
