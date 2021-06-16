@@ -177,7 +177,7 @@ namespace UI_for_Project
 
         private void btnFinishRegister_Click(object sender, RoutedEventArgs e)
         {
-            var finish = MessageBox.Show("Note", "Do you want to finish?", MessageBoxButton.YesNo);
+            var finish = MessageBox.Show( "Do you want to finish?", "Confirm", MessageBoxButton.YesNo);
             if(finish == MessageBoxResult.Yes)
             {
 

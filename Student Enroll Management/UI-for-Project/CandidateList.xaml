@@ -20,15 +20,19 @@
 
             </TextBox>
             <Button Width="20" Height="20" Background="Transparent" BorderThickness="0" RenderTransformOrigin="1.28,0.44" Margin="343,60,217,30">
-                
-                    <Image Source="image/search.png"></Image>
-                
+
+                <Image Source="image/search.png"></Image>
+
 
             </Button>
             <Button Width="180" Height="50" x:Name="BtnPrint"
                     BorderThickness="0"
                     Background="#8F2D56"
-                    Foreground="#FFBC42" Margin="390,25,10,35" Click="BtnPrint_Click" Content="EXPORT DATA"/>
+                    Foreground="#F8B195" Margin="390,25,10,35" Click="BtnPrint_Click" Content="CANDIDATE LIST"/>
+            <Button x:Name="BtnPrint_Letter"
+                BorderThickness="0"
+                Background="#355C7D"
+                Foreground="#FFBC42" Margin="430,80,50,0" Click="btnInGiayBao_Click" Content="EXPORT LETTER" Height="20" VerticalAlignment="Top"/>
 
         </Grid>
         <Grid Width="570" Height="278"
