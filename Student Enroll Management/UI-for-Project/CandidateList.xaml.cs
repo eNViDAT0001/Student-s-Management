@@ -213,16 +213,6 @@ namespace UI_for_Project
                     string nameTable1 = "KET_QUA_CHAM_THI";
                     DataTable dt1 = sqlDataTable.getDataTable(Query1, nameTable1);
 
-                    /*string[] arrDiem = new string[3];
-                    // int i = 0;
-                    for (int i = 0; i < arrDiem.Length; i++)
-                    {
-                        foreach (DataRow row in dt1.Rows)
-                        {
-                            arrDiem[i] = row["mon"].ToString();
-
-                        }
-                    }*/
                    DataRow data1 = dt1.Rows[0];
                     string diemMon1 = data1["diem_thi"].ToString();
                     DataRow data2 = dt1.Rows[1];

@@ -180,16 +180,21 @@
                 VerticalAlignment="Top">Lệ phí thi:</TextBlock>
             </Grid>
 
-            <Button
-                x:Name="btnPrint" Margin="109,3,10,26" Grid.Column="2" Click="btnPrint_Click">
-                Print
-
-            </Button>
+            
 
 
 
 
         </Grid>
+        <Button
+                x:Name="btnPrint" 
+            HorizontalAlignment="Right" 
+            VerticalAlignment="Top" 
+            Margin="10" 
+            Content="Print"
+            Click="btnPrint_Click" >
+
+        </Button>
 
     </Grid>
 </Window>
