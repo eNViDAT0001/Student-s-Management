@@ -47,17 +47,18 @@ namespace UI_for_Project
         {
             try
             {
-                this.IsEnabled = false;
-
+               
                 PrintDialog printDialog = new PrintDialog();
                 if (printDialog.ShowDialog() == true)
                 {
+                    btnPrint.Visibility = Visibility.Collapsed;
                     printDialog.PrintVisual(phieuBaoThi, "Info");
                 }
             }
             finally
             {
-                this.IsEnabled = true;
+               
+                this.Visibility = Visibility.Visible;
 
             }
         }
